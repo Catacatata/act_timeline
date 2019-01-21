@@ -1,0 +1,208 @@
+# Deltascape V2.0 (Savage) - Catastrophe
+
+alertall "Earthquake" before 0 sound "tts Earthquake"
+alertall "Gravitational Wave" before 0 sound "tts AOE"
+alertall "Gravitational Manipulation" before 0 sound "tts Double Stacks"
+alertall "Death's Gaze" before 0 sound "tts Look Away"
+alertall "Evilsphere" before 0 sound "tts Tank Buster"
+alertall "Maniacal Probe (Healer/Tank)" before 0 sound "tts Healer Tank Probes"
+alertall "Maniacal Probe (DPS)" before 0 sound "tts DPS Probes"
+alertall "-100 Gs" before 2 sound "tts -100 G"
+alertall "Gravitational Wave (Enrage)" before 0 sound "tts Enrage"
+
+alertall "--Go Center--" before 0 sound "tts Go Center"
+alertall "--Go Up--" before 0 sound "tts Go Up"
+alertall "--Positions (Healer/Tank)--" before 0 sound "tts Healer Tank Up and Positions"
+alertall "--Positions (DPS)--" before 0 sound "tts DPS Up and Positions"
+alertall "--Stay Down--" before 0 sound "tts Stay Down"
+
+0 "--Stop--" sync /Removing combatant Catastrophe/ window 10000 jump 0
+
+#Phase 1 - 
+1 "--Start--" sync /Catastrophe uses Tremblor/ window 2, 2 jump 7
+7 "Tremblor"
+10 "Tremblor" sync /Catastrophe uses Tremblor/ window 2, 2
+13 "Earthquake" duration 5 sync /Catastrophe readies Earthquake/ window 10
+
+20 "--Marker x2--"
+25 "100 Gs"
+
+30 "Antilight" duration 3 sync /Catastrophe readies Antilight/ window 10
+33 "--Go Center--"
+35 "Petrosphere x4 (Add)" duration 20
+35 "Potent Petrosphere x4 (Add)" duration 20
+46 "Explosion x8"
+47 "Gravitational Wave" duration 3 sync /Catastrophe readies Gravitational Wave/ window 10
+
+55 "Gravitational Manipulation" duration 5 sync /Catastrophe readies Gravitational Manipulation/ window 10
+62 "--Stack Marker x2--" duration 4
+
+68 "--Go Up--"
+74 "Paranormal Wave" sync /Catastrophe uses Paranormal Wave/ window 2, 2
+79 "Paranormal Wave" sync /Catastrophe uses Paranormal Wave/ window 2, 2
+83 "Evilsphere" duration 5 sync /Catastrophe readies Evilsphere/ window 10
+96 "Paranormal Wave" sync /Catastrophe uses Paranormal Wave/ window 2, 2
+
+100 "Maniacal Probe (Healer/Tank)" duration 5 sync /Catastrophe readies Maniacal Probe/ window 10
+107 "--Marker x4 (Healer/Tank)--"
+111 "Death's Gaze" duration 5 sync /Catastrophe readies Death's Gaze/ window 10
+114 "Fleshy Member x4 (Add)"
+118 "Epicenter" duration 3 sync /Catastrophe readies Epicenter/ window 10
+125 "Gravitational Wave" duration 3 sync /Catastrophe readies Gravitational Wave/ window 10
+
+130 "--Marker x2--"
+136 "100 Gs"
+140 "Main Quake x3"
+140 "Gravitational Wave" duration 3 sync /Catastrophe readies Gravitational Wave/ window 10
+149 "Paranormal Wave" sync /Catastrophe uses Paranormal Wave/ window 2, 2
+
+153 "Gravitational Manipulation" duration 5 sync /Catastrophe readies Gravitational Manipulation/ window 10
+160 "--Stack Marker x2--" duration 4
+
+174 "Paranormal Wave" sync /Catastrophe uses Paranormal Wave/ window 2, 2
+178 "Evilsphere" duration 5 sync /Catastrophe readies Evilsphere/ window 10
+191 "Paranormal Wave" sync /Catastrophe uses Paranormal Wave/ window 2, 2
+
+197 "-100 Gs" duration 8 sync /Catastrophe readies -100 Gs/ window 10
+197 "Petrosphere x3 (Add)" duration 20
+197 "Potent Petrosphere x3 (Add)" duration 20
+198 "--Marker x4--"
+206 "Gravitational Collapse x4"
+210 "Death's Gaze" duration 5 sync /Catastrophe readies Death's Gaze/ window 10
+213 "Explosion x6"
+
+220 "--Marker x2--"
+226 "100 Gs"
+
+230 "Antilight" duration 3 sync /Catastrophe readies Antilight/ window 2, 2
+233 "--Go Center--"
+236 "Petrosphere x4 (Add)" duration 20
+236 "Potent Petrosphere x4 (Add)" duration 20
+238 "Gravitational Wave" duration 3 sync /Catastrophe readies Gravitational Wave/ window 10
+
+247 "Explosion x8"
+247 "--Stack Marker--"
+247 "--Positions (Healer/Tank)--"
+253 "Long Drop"
+
+258 "--Marker x2--"
+263 "100 Gs"
+
+268 "Antilight" duration 3 sync /Catastrophe readies Antilight/ window 10
+271 "--Stay Down--"
+273 "Potent Petrosphere x4 (Add)" duration 20
+
+276 "Tremblor" sync /Catastrophe uses Tremblor/ window 2, 2
+279 "Tremblor" sync /Catastrophe uses Tremblor/ window 2, 2
+
+282 "Earthquake" duration 5 sync /Catastrophe readies Earthquake/ window 10
+284 "Explosion x4"
+
+292 "--Marker x2--"
+297 "100 Gs"
+
+307 "Maniacal Probe (DPS)" duration 5 sync /Catastrophe readies Maniacal Probe/ window 10
+314 "--Marker x4 (DPS)--"
+318 "Death's Gaze" duration 5 sync /Catastrophe readies Death's Gaze/ window 10
+321 "Fleshy Member x4 (Add)"
+325 "Epicenter" duration 3 sync /Catastrophe readies Epicenter/ window 10
+
+332 "Gravitational Manipulation" duration 5 sync /Catastrophe readies Gravitational Manipulation/ window 10
+339 "--Stack Marker x2--" duration 4
+
+344 "Antilight" duration 3 sync /Catastrophe readies Antilight/ window 10
+346 "Main Quake x3"
+347 "--Go Center--"
+349 "Petrosphere x4 (Add)" duration 20
+349 "Potent Petrosphere x4 (Add)" duration 20
+
+350 "--Marker x2--"
+355 "100 Gs"
+
+360 "Explosion x8"
+360 "--Stack Marker--"
+360 "--Positions (DPS)--"
+366 "Long Drop"
+
+376 "Paranormal Wave" sync /Catastrophe uses Paranormal Wave/ window 2, 2
+381 "Paranormal Wave" sync /Catastrophe uses Paranormal Wave/ window 2, 2
+385 "Evilsphere" duration 5 sync /Catastrophe readies Evilsphere/ window 10
+398 "Paranormal Wave" sync /Catastrophe uses Paranormal Wave/ window 2, 2
+
+404 "Antilight" duration 3 sync /Catastrophe readies Antilight/ window 10
+407 "--Stay Down--"
+409 "Potent Petrosphere x4 (Add)" duration 20
+410 "--Marker x2--"
+415 "100 Gs"
+
+420 "Maniacal Probe (Healer/Tank)" duration 5 sync /Catastrophe readies Maniacal Probe/ window 10
+421 "Explosion x4"
+428 "--Marker x4 (Healer/Tank)--"
+431 "Death's Gaze" duration 5 sync /Catastrophe readies Death's Gaze/ window 10
+434 "Fleshy Member x4 (Add)"
+438 "Epicenter" duration 3 sync /Catastrophe readies Epicenter/ window 10
+
+445 "Gravitational Manipulation" duration 5 sync /Catastrophe readies Gravitational Manipulation/ window 10
+453 "--Stack Marker x2--" duration 4
+
+457 "Antilight" duration 3 sync /Catastrophe readies Antilight/ window 10
+460 "Main Quake x3"
+460 "--Go Center--"
+463 "Petrosphere x4 (Add)" duration 20
+463 "Potent Petrosphere x4 (Add)" duration 20
+
+464 "--Marker x2--"
+468 "100 Gs"
+
+474 "--Stack Marker--"
+474 "--Positions (Healer/Tank)--"
+480 "Long Drop"
+
+482 "--Go Up--"
+482 "Death's Gaze" duration 5 sync /Catastrophe readies Death's Gaze/ window 10
+
+492 "Gravitational Wave" duration 3 sync /Catastrophe readies Gravitational Wave/ window 10
+497 "Paranormal Wave" sync /Catastrophe uses Paranormal Wave/ window 2, 2
+
+502 "Antilight" duration 3 sync /Catastrophe readies Antilight/ window 10
+505 "--Stay Down--"
+507 "Potent Petrosphere x4 (Add)" duration 20
+507 "--Marker x2--"
+512 "100 Gs"
+
+518 "Paranormal Wave" sync /Catastrophe uses Paranormal Wave/ window 2, 2
+518 "Explosion x4"
+524 "Evilsphere" duration 5 sync /Catastrophe readies Evilsphere/ window 10
+537 "Paranormal Wave" sync /Catastrophe uses Paranormal Wave/ window 2, 2
+
+541 "Gravitational Manipulation" duration 5 sync /Catastrophe readies Gravitational Manipulation/ window 10
+548 "--Stack Marker x2--" duration 4
+554 "--Go Up--"
+
+557 "Antilight" duration 3 sync /Catastrophe readies Antilight/ window 10
+560 "--Stay Down--"
+562 "--Marker x2--"
+562 "Potent Petrosphere x4 (Add)" duration 20
+567 "Tremblor" sync /Catastrophe uses Tremblor/ window 2, 2
+567 "100 Gs"
+572 "Earthquake" duration 5 sync /Catastrophe readies Earthquake/ window 10
+573 "Explosion x4"
+582 "Gravitational Wave" duration 3 sync /Catastrophe readies Gravitational Wave/ window 10
+
+590 "-100 Gs" duration 8 sync /Catastrophe readies -100 Gs/ window 10
+590 "Petrosphere x3 (Add)" duration 20
+590 "Potent Petrosphere x3 (Add)" duration 20
+591 "--Marker x4--"
+599 "Gravitational Collapse x4"
+603 "Death's Gaze" duration 5 sync /Catastrophe readies Death's Gaze/ window 10
+606 "Explosion x6"
+
+610 "Antilight" duration 3 sync /Catastrophe readies Antilight/ window 10
+613 "--Stay Down--"
+615 "--Marker x2--"
+616 "Potent Petrosphere x4 (Add)" duration 20
+620 "Tremblor" sync /Catastrophe uses Tremblor/ window 2, 2
+620 "100 Gs"
+626 "Earthquake" duration 5 sync /Catastrophe readies Earthquake/ window 10
+627 "Explosion x4"
+633 "Gravitational Wave (Enrage)" duration 9 sync /Catastrophe readies Gravitational Wave/ window 10

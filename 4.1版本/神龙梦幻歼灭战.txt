@@ -1,0 +1,100 @@
+# Shinryu Ex
+
+hideall "--重置--"
+hideall "--同步--"
+
+0 "--重置--" sync /Removing combatant 神龙\.  Max HP: 17167557\./ window 10000 jump 0
+
+### PHASE 1: Elemental carousel
+###
+0.0 "开始" sync /:战斗开始！/ window 0,1
+11.0 "--同步--" sync /:神龙 starts using 大地之怒/ window 11,5
+20.5 "大地之怒" # castbar end
+35.8 "连线" # debuff appearance
+44.5 "大海啸" # movement
+49.5 "尾巴点名 (治疗)" duration 8 # marker -> disappearance
+62.5 "召唤冰柱" duration 4 # appearance -> divebombs
+67.5 "尾部猛击" # targetable
+71.5 "超新星 / 闪电" duration 8 # castbar -> damage
+91.0 "龙掌" # appearance
+93.5 "吹雪" # castbar end
+104.0 "死亡轮回 / 天光轮回 (1)" duration 2.5 sync /:神龙正在发动“死亡轮回”/ window 10 # castbar
+113.5 "制裁之雷 / 地狱之火炎" duration 9.5
+118.0 "召唤冰柱" duration 4 # appearance -> divebombs
+139.0 "尾巴点名 (dps)" duration 8 # marker -> disappearance
+141.5 "闪电" duration 7.5 # castbar -> damage
+157.5 "尾部猛击" # targetable
+164.0 "吹雪" # castbar end
+172.8 "连线 (T/H)" # debuff appearance
+176.0 "大地吐息" duration 6 # mark -> damage
+184.0 "死亡轮回 / 天光轮回 (2)" duration 3.5 sync /:神龙正在发动“死亡轮回”/ window 10 # castbar
+193.5 "吹雪" # castbar end
+207.3 "连线 (治疗)" # debuff appearance
+208.0 "钻石星尘" # castbar end
+226.5 "灵龙刷新" # appearance
+233.5 "尾巴点名 (坦克)" duration 8 # marker -> disappearance
+251.6 "尾部猛击" # targetable
+269.0 "死亡轮回 / 天光轮回 (3)" duration 3.5 sync /:神龙正在发动“死亡轮回”/ window 10 # castbar
+271.0 "召唤冰柱" duration 4 # appearance -> divebombs
+282.5 "大气爆发" duration 11 sync /:神龙正在发动“大气爆发”/ window 10 # castbar start -> last knockback
+295.5 "连线 (dps)" # debuff appearance
+314.5 "大地吐息" duration 6 # mark -> damage
+322.5 "吹雪" # castbar end
+326.5 "--不可选中--"
+331.5 "螺旋冲锋" duration 5.5
+342.5 "--可选中--"
+344.0 "超新星 / 闪电" duration 8 # castbar
+360.0 "死亡轮回 / 天光轮回 (4)" duration 3.5 sync /:神龙正在发动“死亡轮回”/ window 10 # castbar
+372.0 "闪电" duration 8 # castbar
+386.5 "大海啸" # movement
+393.0 "暗物质"
+
+### PHASE 2: Adds, explosions, dramatic tail climbing
+###
+500.0 "--第二阶段--" sync /:神龙正在发动“暗物质”/ window 500,500
+513.0 "QTE" duration 5 # castbar
+542.0 "空降" # damage
+553.0 "陨石冲击 (1)" # damage
+572.0 "陨石冲击 (2)" # damage
+588.5 "陨石点名" duration 7 # marker appearing -> disappearing
+602.0 "陨石冲击 (3)" # damage
+
+### PHASE 3: Anticlimax
+###
+# TODO: seen protostar anywhere from 616-622, once as late as 630?
+800.0 "--第三阶段--" sync /:神龙正在发动“原恒星”/ window 500,500
+807.0 "原恒星" # damage
+815.5 "尾部重击"
+844.0 "--可选中--" # TODO: also seen at 843.5, not synced with protostar?
+
+# Loop 1
+# TODO: seen this at 855-857 even with previous protostar sync
+856.0 "--同步--" sync /:神龙正在发动“万亿斩击”/ window 10,10
+859.5 "万亿斩击" # end of castbar
+866.0 "原子射线 + 连线" duration 6.5 # 原子射线 cast -> damage
+885.5 "吹雪" # end of castbar
+889.5 "超新星 / 闪电" # end of castbar
+# TODO: also seen 黑暗吐息 898 + tera 908
+893.0 "黑暗吐息 / 神龙啸" # start of cast
+903.0 "--同步--" sync /:神龙正在发动“万亿斩击”/ window 15,15
+906.5 "万亿斩击" # end of castbar
+919.0 "灵龙刷新" # appearance
+
+# Loop 2
+953.0 "--同步--" sync /:神龙正在发动“万亿斩击”/ window 10,10
+955.5 "万亿斩击" # end of castbar
+963.0 "原子射线 + 连线" duration 6.5 # 原子射线 cast -> damage
+983.0 "吹雪" # end of castbar
+987.0 "超新星 / 闪电" # end of castbar
+991.0 "黑暗吐息 / 神龙啸" # start of cast
+1001.0 "--同步--" sync /:神龙正在发动“万亿斩击”/ window 10,10
+1004.5 "万亿斩击" # end of castbar
+1015.0 "灵龙刷新" # appearance
+
+### PHASE 4: Race to the finish!
+###
+1045.0 "--第四阶段--"
+1045.0 "--同步--" sync /:264E:神龙正在发动“大海啸”/ window 300,300
+1085.0 "翅膀 1" # end of castbar
+1089.0 "翅膀 2" # end of castbar
+1115.0 "大海啸" # end of castbar

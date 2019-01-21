@@ -1,0 +1,114 @@
+# Alexander - The Fist of the Father (Savage) - A1S
+# Created by Shasta Kota of Death & Taxes (DnT) on Gilgamesh
+# Shasta's reddit: /u/shastaxc
+
+######Windows 8 & 10 Sound Triggers#######
+#define speaker "voice" "Microsoft Zira Desktop" 0 100
+#define speaker "voice" "Microsoft David Desktop" 0 100
+
+#alertall "蒸汽导弹" before 3 speak "voice" "蒸汽导弹"
+#alertall "粘着弹" before 3 speak "voice"  "粘着弹"
+#alertall "紧急出击" before 3 speak "voice"  "警报出现"
+#alertall "超压缩等离子" before 3 speak "voice"  "T死刑"
+#alertall "紧急上升" before 7 speak "voice"  "六秒后上天"
+
+######Windows 7 Sound Triggers#######
+#define speaker "voice" "Microsoft Anna" 0 100
+
+#alertall "蒸汽导弹" before 3 speak "voice" "蒸汽导弹"
+#alertall "粘着弹" before 3 speak "voice"  "粘着弹"
+#alertall "紧急出击" before 3 speak "voice"  "警报出现"
+#alertall "超压缩等离子" before 3 speak "voice"  "T死刑"
+#alertall "紧急上升" before 7 speak "voice"  "六秒后上天"
+
+0 "--战斗终了--" sync /第8大型机库的封锁解除了/ window 10000 jump 0
+
+# Phase 1 
+0 "--第一阶段--" sync /距第8大型机库被封锁还有15秒/ window 100000
+#7 "皇泉射线"
+#11 "炮台散射"
+#19 "炮台散射"
+19 "蒸汽导弹"
+20 "光子照射" duration 3
+#28 "皇泉射线"
+37 "粘着弹" duration 3
+#39 "皇泉射线"
+40 "光子照射" duration 3
+#46 "炮台散射"
+#49 "皇泉射线"
+54 "紧急出击"
+63 "蒸汽导弹"
+#63 "炮台散射"
+#66 "皇泉射线"
+#70 "炮台散射"
+72 "光子照射" duration 3
+#77 "炮台散射"
+#79 "炮台散射"
+#84 "皇泉射线"
+85 "请求救援"
+ 
+# Phase 2 - Oppressor 0.5
+87 "--第二阶段--" sync /Added new combatant 压迫者零号/ window 10
+110 "超大型导弹"
+#112 "炮台散射"
+117 "紧急出击"
+126 "粘着弹" duration 3
+#128 "皇泉射线"
+129 "光子照射" duration 3
+#136 "炮台散射"
+145 "蒸汽导弹"
+#147 "皇泉射线"
+#154 "超压缩等离子"
+162 "光子照射" duration 3
+#173 "炮台散射"
+#183 "皇泉射线"
+188 "紧急上升"
+200 "粘着弹 x8" duration 8
+
+
+# Post-First Jump
+211 "落地" sync /压迫者发动了“落地”/ window 10
+230 "超大型导弹"
+#233 "炮台散射"
+238 "紧急出击"
+246 "粘着弹" duration 3
+#248 "皇泉射线"
+250 "光子照射" duration 3
+#257 "炮台散射"
+266 "蒸汽导弹"
+#268 "皇泉射线"
+#275 "超压缩等离子"
+283 "光子照射" duration 3
+#294 "炮台散射"
+#303 "皇泉射线"
+309 "紧急上升"
+321 "粘着弹 x8" duration 8
+ 
+# Post-Second Jump
+332 "落地" sync /压迫者发动了“落地”/ window 10
+351 "超大型导弹"
+#353 "炮台散射"
+359 "紧急出击"
+366 "粘着弹" duration 3
+#369 "皇泉射线"
+371 "光子照射" duration 3
+#378 "炮台散射"
+387 "蒸汽导弹"
+#390 "皇泉射线"
+#396 "超压缩等离子"
+405 "光子照射" duration 3
+#415 "炮台散射"
+#424 "皇泉射线"
+430 "紧急上升"
+442 "粘着弹 x8" duration 8
+ 
+# Post-Third Jump
+453 "落地" sync /压迫者发动了“落地”/ window 10 
+472 "超大型导弹"
+#475 "炮台散射"
+480 "紧急出击"
+487 "粘着弹" duration 3
+#490 "皇泉射线"
+492 "光子照射"
+507 "蒸汽导弹"
+510 "狂暴" duration 10

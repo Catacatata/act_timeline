@@ -1,0 +1,186 @@
+# 欧米茄零式时空狭缝 德尔塔幻境1 - 老者
+# 汉化翻译 by 卡塔利亚
+
+###定制你自己的时间轴，在不想要的提示前加上#标签
+###他们就不会出现在你的时间轴上！
+
+##############################################################
+################## Windows 8 & 10 音效 ##################
+#删去前方的#标签来选择声音
+#define speaker "voice" "Microsoft Huihui Desktop" 0 100
+#define speaker "voice" "Microsoft Hanhan Desktop" 0 100
+
+#################### Windows 7 音效 ####################
+#删去前方的#标签来选择声音
+#define speaker "voice" "Microsoft Lili" 0 100
+
+#################### NGA汉化版限定 ####################
+#删去前方的#标签来选择声音
+#define speaker "voice" 0 100
+
+################ 定制语音播报 #####################
+########删去或添加前方的#标签来选择语音播报内容
+alertall "双重落雷" before 0 speak "voice" "双重落雷"
+alertall "咆哮" before 0 speak "voice" "AOE"
+alertall "压迫" before 1 speak "voice" "击退 远离正面"
+alertall "大漩涡" before 0 speak "voice" "全力群抬"
+alertall "冰焰" before 0 speak "voice" "分摊"
+alertall "火球 x12 (狂暴)" before 0 speak "voice" "狂暴"
+
+alertall "--先中间再外围--" before 0 speak "voice" "先中间再外围"
+alertall "--先中间再外围最后分摊--" before 0 speak "voice" "先中间再外围最后分摊"
+alertall "--先安全点再中间最后外围--" before 0 speak "voice" "先安全点再中间最后外围"
+alertall "--先击退再压迫--" before 0 speak "voice" "先击退再远离正面"
+alertall "--外围压迫再到中间--" before 0 speak "voice" "外围压迫再到中间"
+alertall "--第二次先中间再外围--" before 0 speak "voice" "第二次先中间再外围"
+
+0 "--重置--" sync /Removing combatant 老者/ window 10000 jump 0
+
+#Phase 1 - 
+1 "--开始--" sync /老者发动了“太古龙尾”/ window 2, 2 jump 9
+9 "太古龙尾"
+15 "太古龙尾" sync /老者发动了“太古龙尾”/ window 2, 2
+16 "双重落雷" duration 5 sync /老者正在发动“双重落雷”/ window 10
+
+30 "经典元素" duration 5 sync /老者正在发动“经典元素”/ window 10
+39 "--先中间再外围--"
+39 "火焰" sync /老者发动了“火焰”/ window 2, 2
+40 "火球 x8 (中间)" duration 17
+43 "闪耀冻结" sync /老者发动了“闪耀冻结”/ window 2, 2
+47 "下行突风" duration 5 sync /老者正在发动“下行突风”/ window 10
+55 "闪电" duration 5 sync /老者正在发动“闪电”/ window 10
+
+62 "咆哮" duration 4 sync /老者正在发动“咆哮”/ window 10
+
+#Phase 2 -
+73 "太古龙尾" sync /老者发动了“太古龙尾”/ window 2, 2
+79 "太古龙尾" sync /老者发动了“太古龙尾”/ window 2, 2
+
+84 "双重落雷" duration 5 sync /老者正在发动“双重落雷”/ window 10
+92 "压迫" duration 3 sync /老者正在发动“压迫”/ window 10
+
+99 "--先中间再外围最后分摊--"
+99 "火焰" sync /老者发动了“火焰”/ window 2, 2
+100 "火球 x8 (外围)" duration 17
+104 "火焰" sync /老者发动了“火焰”/ window 2, 2
+105 "火球 x4 (中间)" duration 17
+
+109 "太古龙尾" sync /老者发动了“太古龙尾”/ window 2, 2
+114 "闪电" duration 5 sync /老者正在发动“闪电”/ window 10
+122 "冰焰" duration 5 sync /老者正在发动“冰焰”/ window 10
+
+#Phase 3 -
+134 "太古龙尾" sync /老者发动了“太古龙尾”/ window 2, 2
+141 "太古龙尾" sync /老者发动了“太古龙尾”/ window 2, 2
+142 "双重落雷" duration 5 sync /老者正在发动“双重落雷”/ window 10
+
+153 "咆哮" duration 4 sync /老者正在发动“咆哮”/ window 2, 2
+159 "咆哮" duration 4 sync /老者正在发动“咆哮”/ window 2, 2
+
+#Phase 4 -
+170 "太古龙尾" sync /老者发动了“太古龙尾”/ window 2, 2
+
+171 "大漩涡" duration 5 sync /老者正在发动“大漩涡”/ window 10
+179 "咆哮" duration 4 sync /老者正在发动“咆哮”/ window 10
+
+188 "经典元素" duration 5 sync /老者正在发动“经典元素”/ window 10
+197 "--先安全点再中间最后外围--"
+197 "火焰" sync /老者发动了“火焰”/ window 2, 2
+198 "火球 x7 (4 Center, 3 Far)" duration 17
+203 "闪耀冻结" sync /老者发动了“闪耀冻结”/ window 2, 2
+206 "下行突风" duration 5 sync /老者正在发动“下行突风”/ window 10
+215 "闪电" duration 5 sync /老者正在发动“闪电”/ window 10
+
+224 "--先击退再压迫--"
+224 "火焰" sync /老者发动了“火焰”/ window 2, 2
+225 "火球 x6 (4中间, 2外围)" duration 17
+228 "闪耀冻结" sync /老者发动了“闪耀冻结”/ window 2, 2
+
+233 "风息之翼" duration 5 sync /老者正在发动“风息之翼”/ window 2, 2
+
+241 "压迫" duration 3 sync /老者正在发动“压迫”/ window 10
+247 "冰焰" duration 5 sync /老者正在发动“冰焰”/ window 10
+255 "咆哮" duration 4 sync /老者正在发动“咆哮”/ window 10
+
+#Phase 5 -
+266 "太古龙尾" sync /老者发动了“太古龙尾”/ window 2, 2
+272 "太古龙尾" sync /老者发动了“太古龙尾”/ window 2, 2
+
+277 "大漩涡" duration 5 sync /老者正在发动“大漩涡”/ window 10
+285 "双重落雷" duration 5 sync /老者正在发动“双重落雷”/ window 10
+
+298 "--外围压迫再到中间--"
+298 "火焰" sync /老者发动了“火焰”/ window 2, 2
+299 "火球 x4 (中间)" duration 17
+306 "火焰" sync /老者发动了“火焰”/ window 2, 2
+307 "火球 x8 (外围)" duration 17
+
+308 "闪电" duration 5 sync /老者正在发动“闪电”/ window 10
+319 "压迫" duration 3 sync /老者正在发动“压迫”/ window 10
+
+325 "咆哮" duration 4 sync /老者正在发动“咆哮”/ window 2, 2
+331 "咆哮" duration 4 sync /老者正在发动“咆哮”/ window 2, 2
+
+#Phase 6 - 
+340 "经典元素" duration 5 sync /老者正在发动“经典元素”/ window 10
+349 "--第二次先中间再外围--"
+349 "火焰" sync /老者发动了“火焰”/ window 2, 2
+350 "火球 x8 (外围)" duration 17
+352 "火焰" sync /老者发动了“火焰”/ window 2, 2
+353 "火球 x4 (中间)" duration 17
+
+357 "闪耀冻结" sync /老者发动了“闪耀冻结”/ window 2, 2
+361 "下行突风" duration 5 sync /老者正在发动“下行突风”/ window 10
+370 "冰焰" duration 5 sync /老者正在发动“冰焰”/ window 10
+
+378 "咆哮" duration 4 sync /老者正在发动“咆哮”/ window 10
+
+#Repeat Phase 2 - 
+389 "太古龙尾" sync /老者发动了“太古龙尾”/ window 2, 2
+395 "太古龙尾" sync /老者发动了“太古龙尾”/ window 2, 2
+
+400 "双重落雷" duration 5 sync /老者正在发动“双重落雷”/ window 10
+407 "压迫" duration 3 sync /老者正在发动“压迫”/ window 10
+
+415 "--先中间再外围最后分摊--"
+415 "火焰" sync /老者发动了“火焰”/ window 2, 2
+416 "火球 x8 (外围)" duration 17
+420 "火焰" sync /老者发动了“火焰”/ window 2, 2
+421 "火球 x4 (中间)" duration 17
+
+425 "太古龙尾" sync /老者发动了“太古龙尾”/ window 2, 2
+430 "闪电" duration 5 sync /老者正在发动“闪电”/ window 10
+438 "冰焰" duration 5 sync /老者正在发动“冰焰”/ window 10
+
+#Repeat Phase 1 Classical Elements
+449 "经典元素" duration 5 sync /老者正在发动“经典元素”/ window 10
+458 "--先中间再外围--"
+458 "火焰" sync /老者发动了“火焰”/ window 2, 2
+459 "火球 x8 (中间)" duration 17
+462 "闪耀冻结" sync /老者发动了“闪耀冻结”/ window 2, 2
+466 "下行突风" duration 5 sync /老者正在发动“下行突风”/ window 10
+474 "闪电" duration 5 sync /老者正在发动“闪电”/ window 10
+
+481 "咆哮" duration 4 sync /老者正在发动“咆哮”/ window 10
+
+#Repeat Phase 5
+492 "太古龙尾" sync /老者发动了“太古龙尾”/ window 2, 2
+498 "太古龙尾" sync /老者发动了“太古龙尾”/ window 2, 2
+
+503 "大漩涡" duration 5 sync /老者正在发动“大漩涡”/ window 10
+511 "双重落雷" duration 5 sync /老者正在发动“双重落雷”/ window 10
+
+524 "--外围压迫再到中间--"
+524 "火焰" sync /老者发动了“火焰”/ window 2, 2
+525 "火球 x4 (中间)" duration 17
+532 "火焰" sync /老者发动了“火焰”/ window 2, 2
+533 "火球 x8 (外围)" duration 17
+
+534 "闪电" duration 5 sync /老者正在发动“闪电”/ window 10
+545 "压迫" duration 3 sync /老者正在发动“压迫”/ window 10
+
+551 "咆哮" duration 4 sync /老者正在发动“咆哮”/ window 2, 2
+557 "咆哮" duration 4 sync /老者正在发动“咆哮”/ window 2, 2
+
+564 "火焰" sync /老者发动了“火焰”/ window 2, 2
+565 "火球 x12 (狂暴)" duration 17

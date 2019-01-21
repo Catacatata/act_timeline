@@ -1,0 +1,166 @@
+# Deltascape V1.0 (Savage) - Alte Roite
+
+alertall "Twin Bolt" before 0 sound "tts Twin Bolt"
+alertall "Roar" before 0 sound "tts AOE"
+alertall "Clamp" before 1 sound "tts Clamp"
+alertall "Charybdis" before 0 sound "tts Charybdis"
+alertall "Blaze" before 0 sound "tts Stack"
+alertall "Ball Of Fire x12 (Enrage)" before 0 sound "tts Enrage"
+
+alertall "--In Out then In--" before 0 sound "tts In, Out then In"
+alertall "--In Out then Stack--" before 0 sound "tts In, Out then Stack"
+alertall "--Safe Spot Out then In--" before 0 sound "tts Safe Spot, Out then In"
+alertall "--Blowback then Clamp--" before 0 sound "tts Blowback then Clamp"
+alertall "--Out Clamp then In--" before 0 sound "tts Out, Clamp then In"
+alertall "--Between Fireballs Out then in--" before 0 sound "tts Between Fireballs, Out then In"
+
+0 "--Stop--" sync /Removing combatant Alte Roite/ window 10000 jump 0
+
+#Phase 1 - 
+1 "--Start--" sync /Alte Roite uses Wyrm Tail/ window 2, 2 jump 9
+9 "Wyrm Tail"
+15 "Wyrm Tail" sync /Alte Roite uses Wyrm Tail/ window 2, 2
+16 "Twin Bolt" duration 5 sync /Alte Roite readies Twin Bolt/ window 10
+
+30 "The Classical Elements" duration 5 sync /Alte Roite readies The Classical Elements/ window 10
+39 "--In Out then In--"
+39 "Flame" sync /Alte Roite uses Flame/ window 2, 2
+40 "Ball Of Fire x8 (Center)" duration 17
+43 "Flash Freeze" sync /Alte Roite uses Flash Freeze/ window 2, 2
+47 "Downburst" duration 5 sync /Alte Roite readies Downburst/ window 10
+55 "Levinbolt" duration 5 sync /Alte Roite readies Levinbolt/ window 10
+
+62 "Roar" duration 4 sync /Alte Roite readies Roar/ window 10
+
+#Phase 2 -
+73 "Wyrm Tail" sync /Alte Roite uses Wyrm Tail/ window 2, 2
+79 "Wyrm Tail" sync /Alte Roite uses Wyrm Tail/ window 2, 2
+
+84 "Twin Bolt" duration 5 sync /Alte Roite readies Twin Bolt/ window 10
+92 "Clamp" duration 3 sync /Alte Roite readies Clamp/ window 10
+
+99 "--In Out then Stack--"
+99 "Flame" sync /Alte Roite uses Flame/ window 2, 2
+100 "Ball Of Fire x8 (Far)" duration 17
+104 "Flame" sync /Alte Roite uses Flame/ window 2, 2
+105 "Ball Of Fire x4 (Center)" duration 17
+
+109 "Wyrm Tail" sync /Alte Roite uses Wyrm Tail/ window 2, 2
+114 "Levinbolt" duration 5 sync /Alte Roite readies Levinbolt/ window 10
+122 "Blaze" duration 5 sync /Alte Roite readies Blaze/ window 10
+
+#Phase 3 -
+134 "Wyrm Tail" sync /Alte Roite uses Wyrm Tail/ window 2, 2
+141 "Wyrm Tail" sync /Alte Roite uses Wyrm Tail/ window 2, 2
+142 "Twin Bolt" duration 5 sync /Alte Roite readies Twin Bolt/ window 10
+
+153 "Roar" duration 4 sync /Alte Roite readies Roar/ window 2, 2
+159 "Roar" duration 4 sync /Alte Roite readies Roar/ window 2, 2
+
+#Phase 4 -
+170 "Wyrm Tail" sync /Alte Roite uses Wyrm Tail/ window 2, 2
+
+171 "Charybdis" duration 5 sync /Alte Roite readies Charybdis/ window 10
+179 "Roar" duration 4 sync /Alte Roite readies Roar/ window 10
+
+188 "The Classical Elements" duration 5 sync /Alte Roite readies The Classical Elements/ window 10
+197 "--Safe Spot Out then In--"
+197 "Flame" sync /Alte Roite uses Flame/ window 2, 2
+198 "Ball Of Fire x7 (4 Center, 3 Far)" duration 17
+203 "Flash Freeze" sync /Alte Roite uses Flash Freeze/ window 2, 2
+206 "Downburst" duration 5 sync /Alte Roite readies Downburst/ window 10
+215 "Levinbolt" duration 5 sync /Alte Roite readies Levinbolt/ window 10
+
+224 "--Blowback then Clamp--"
+224 "Flame" sync /Alte Roite uses Flame/ window 2, 2
+225 "Ball Of Fire x6 (4 Center, 2 Far)" duration 17
+228 "Flash Freeze" sync /Alte Roite uses Flash Freeze/ window 2, 2
+
+233 "Breath Wing" duration 5 sync /Alte Roite readies Breath Wing/ window 2, 2
+
+241 "Clamp" duration 3 sync /Alte Roite readies Clamp/ window 10
+247 "Blaze" duration 5 sync /Alte Roite readies Blaze/ window 10
+255 "Roar" duration 4 sync /Alte Roite readies Roar/ window 10
+
+#Phase 5 -
+266 "Wyrm Tail" sync /Alte Roite uses Wyrm Tail/ window 2, 2
+272 "Wyrm Tail" sync /Alte Roite uses Wyrm Tail/ window 2, 2
+
+277 "Charybdis" duration 5 sync /Alte Roite readies Charybdis/ window 10
+285 "Twin Bolt" duration 5 sync /Alte Roite readies Twin Bolt/ window 10
+
+298 "--Out Clamp then In--"
+298 "Flame" sync /Alte Roite uses Flame/ window 2, 2
+299 "Ball Of Fire x4 (Center)" duration 17
+306 "Flame" sync /Alte Roite uses Flame/ window 2, 2
+307 "Ball Of Fire x8 (Far)" duration 17
+
+308 "Levinbolt" duration 5 sync /Alte Roite readies Levinbolt/ window 10
+319 "Clamp" duration 3 sync /Alte Roite readies Clamp/ window 10
+
+325 "Roar" duration 4 sync /Alte Roite readies Roar/ window 2, 2
+331 "Roar" duration 4 sync /Alte Roite readies Roar/ window 2, 2
+
+#Phase 6 - 
+340 "The Classical Elements" duration 5 sync /Alte Roite readies The Classical Elements/ window 10
+349 "--Between Fireballs Out then in--"
+349 "Flame" sync /Alte Roite uses Flame/ window 2, 2
+350 "Ball Of Fire x8 (Far)" duration 17
+352 "Flame" sync /Alte Roite uses Flame/ window 2, 2
+353 "Ball Of Fire x4 (Center)" duration 17
+
+357 "Flash Freeze" sync /Alte Roite uses Flash Freeze/ window 2, 2
+361 "Downburst" duration 5 sync /Alte Roite readies Downburst/ window 10
+370 "Blaze" duration 5 sync /Alte Roite readies Blaze/ window 10
+
+378 "Roar" duration 4 sync /Alte Roite readies Roar/ window 10
+
+#Repeat Phase 2 - 
+389 "Wyrm Tail" sync /Alte Roite uses Wyrm Tail/ window 2, 2
+395 "Wyrm Tail" sync /Alte Roite uses Wyrm Tail/ window 2, 2
+
+400 "Twin Bolt" duration 5 sync /Alte Roite readies Twin Bolt/ window 10
+407 "Clamp" duration 3 sync /Alte Roite readies Clamp/ window 10
+
+415 "--In Out then Stack--"
+415 "Flame" sync /Alte Roite uses Flame/ window 2, 2
+416 "Ball Of Fire x8 (Far)" duration 17
+420 "Flame" sync /Alte Roite uses Flame/ window 2, 2
+421 "Ball Of Fire x4 (Center)" duration 17
+
+425 "Wyrm Tail" sync /Alte Roite uses Wyrm Tail/ window 2, 2
+430 "Levinbolt" duration 5 sync /Alte Roite readies Levinbolt/ window 10
+438 "Blaze" duration 5 sync /Alte Roite readies Blaze/ window 10
+
+#Repeat Phase 1 Classical Elements
+449 "The Classical Elements" duration 5 sync /Alte Roite readies The Classical Elements/ window 10
+458 "--In Out then In--"
+458 "Flame" sync /Alte Roite uses Flame/ window 2, 2
+459 "Ball Of Fire x8 (Center)" duration 17
+462 "Flash Freeze" sync /Alte Roite uses Flash Freeze/ window 2, 2
+466 "Downburst" duration 5 sync /Alte Roite readies Downburst/ window 10
+474 "Levinbolt" duration 5 sync /Alte Roite readies Levinbolt/ window 10
+
+481 "Roar" duration 4 sync /Alte Roite readies Roar/ window 10
+
+#Repeat Phase 5
+492 "Wyrm Tail" sync /Alte Roite uses Wyrm Tail/ window 2, 2
+498 "Wyrm Tail" sync /Alte Roite uses Wyrm Tail/ window 2, 2
+
+503 "Charybdis" duration 5 sync /Alte Roite readies Charybdis/ window 10
+511 "Twin Bolt" duration 5 sync /Alte Roite readies Twin Bolt/ window 10
+
+524 "--Out Clamp then In--"
+524 "Flame" sync /Alte Roite uses Flame/ window 2, 2
+525 "Ball Of Fire x4 (Center)" duration 17
+532 "Flame" sync /Alte Roite uses Flame/ window 2, 2
+533 "Ball Of Fire x8 (Far)" duration 17
+
+534 "Levinbolt" duration 5 sync /Alte Roite readies Levinbolt/ window 10
+545 "Clamp" duration 3 sync /Alte Roite readies Clamp/ window 10
+
+551 "Roar" duration 4 sync /Alte Roite readies Roar/ window 2, 2
+557 "Roar" duration 4 sync /Alte Roite readies Roar/ window 2, 2
+
+564 "Flame" sync /Alte Roite uses Flame/ window 2, 2
+565 "Ball Of Fire x12 (Enrage)" duration 17

@@ -1,0 +1,206 @@
+# The Emanation (Extreme) - Lakshmi
+
+alertall "Chanchala" before 0 sound "tts Chanchala"
+alertall "The Pull of Light" before 0 sound "tts Tank Buster"
+alertall "Stotram" before 1 sound "tts AOE"
+alertall "Divine Denial" before 0 sound "tts Pushback"
+alertall "Divine Desire" before 0 sound "tts Pull-in Bleed and Stun"
+alertall "Divine Doubt" before 0 sound "tts Charm"
+alertall "The Pall of Light" before 1 sound "tts Stack"
+
+alertall "--Blue Mark (The Path of Light)--" before 2 sound "tts Blue Mark"
+alertall "--Chanchala over--" before 0 sound "tts Chanchala over"
+
+# Notes:
+# Vril lasts 50 seconds
+#
+# Chanchala - Buff on Boss
+# Stotram - Raidwide AOE
+# Hand of Grace - 3x Target Right
+# Hand of Beauty - 2x Target Left
+# Alluring Arm - Multiple Target Left/Right
+# Blissful Arrow - Attack to players with "Target Right"
+# Blissful Hammer - Attack to players with "Target Left"
+# The Pull of Light - Mini tank buster
+# The Pall of Light - Stack Marker
+# The Path of Light - Blue Mark OT cleave
+# Blissful Spear - Line AOE + refill Vril
+# Devine Denial - Pushback
+# Devine Desire - Bleeding + Stun
+# Divine Doubt - Confuse all party members
+# Jagadishwari - Summon big Lakshmi
+# Alluring Embrace - Ultimate
+
+0 "--Stop--" sync /Removing combatant Lakshmi/ window 10000 jump 0
+
+#Phase 1 - Adds
+1 "--Start--" sync /Decriers/ window 10000
+12 "Inner Demons" duration 4 sync /The dreaming kshatriya begins casting Inner Demons/ window 2, 2
+13 "Stotram" duration 3 sync /Lakshmi readies Stotram/ window 2, 2
+
+#Phase 2 - Hand of Grace
+100 "--Phase 2--" sync /Who are you to wake them from the dream/ window 10000
+104 "Hand of Grace" duration 2 sync /Lakshmi readies Hand of Grace/ window 2, 2
+104 "--Target Right x3 (Blissful Arrow)--" duration 16
+
+109 "The Pull of Light" duration 5 sync /Lakshmi readies The Pull of Light/ window 2, 2
+121 "Stotram" duration 3 sync /Lakshmi readies Stotram/ window 2, 2
+130 "The Pull of Light" duration 5 sync /Lakshmi readies The Pull of Light/ window 2, 2
+
+138 "--Blue Mark (The Path of Light)--" duration 4
+143 "The Path of Light" sync /Lakshmi uses The Path of Light/ window 2, 2
+
+#Phase 3 - Alluring Arm
+150 "--Phase 3--" sync /My grace, my beauty, my everything/ window 10000
+150 "Alluring Arm" duration 3 sync /Lakshmi readies Alluring Arm/ window 2, 2
+150 "--Target Left x2 (Blissful Hammer)--" duration 16
+150 "--Target Right (Blissful Arrow)--" duration 16
+
+155 "The Pull of Light" duration 5 sync /Lakshmi readies The Pull of Light/ window 2, 2
+167 "Stotram" duration 3 sync /Lakshmi readies Stotram/ window 2, 2
+
+172 "The Pall of Light" duration 5 sync /Lakshmi readies The Pall of Light/ window 2, 2
+181 "The Pull of Light" duration 5 sync /Lakshmi readies The Pull of Light/ window 2, 2
+
+#Phase 4 - Chanchala
+191 "--Phase 4--" sync /I shall free you from your hate/ window 10000
+191 "Chanchala" duration 4 sync /Lakshmi readies Chanchala/ window 10
+191 "--Vril--"
+
+203 "Divine Denial" duration 5 sync /Lakshmi readies Divine Denial/ window 10
+
+214 "Hand of Beauty" duration 3 sync /Lakshmi readies Hand of Beauty/ window 2, 2
+214 "--Vril (Healer)--"
+214 "--Target Left x2 (Blissful Hammer)--" duration 16
+
+214 "--Vril (Main Tank)--"
+219 "The Pull of Light" duration 5 sync /Lakshmi readies The Pull of Light/ window 2, 2
+
+227 "--Vril (Off Tank)--"
+227 "--Blue Mark (The Path of Light)--" duration 4
+232 "The Path of Light" sync /Lakshmi uses The Path of Light/ window 2, 2
+
+239 "--Vril--"
+239 "Divine Desire" duration 5 sync /Lakshmi readies Divine Desire/ window 10
+
+245 "--Chanchala over--"
+252 "The Pull of Light" duration 5 sync /Lakshmi readies The Pull of Light/ window 2, 2
+
+264 "--Blue Mark (The Path of Light)--" duration 4
+270 "The Path of Light" sync /Lakshmi uses The Path of Light/ window 2, 2
+
+274 "Stotram" duration 3 sync /Lakshmi readies Stotram/ window 2, 2
+
+#Phase 4 -
+281 "--Phase 4--" sync /Hearken to me, my dreamers/ window 10000
+281 "Dreaming Brahmin x2 (Add)"
+281 "Dreaming Shudra x2 (Add)"
+
+#Phase 5 -
+400 "Jagadishwari" sync /Lakshmi uses Jagadishwari/ window 300, 0
+
+402 "--Phase 5--" sync /Ressst your weary sssouls in my bosom/ window 10000
+402 "--Vril--"
+436 "Alluring Embrace" sync /Lakshmi uses Alluring Embrace/ window 10000
+
+440 "--Vril--"
+440 "Chanchala" duration 4 sync /Lakshmi readies Chanchala/ window 10
+
+452 "Divine Doubt" duration 6 sync /Lakshmi readies Divine Doubt/ window 10
+
+469 "--Vril (Off Tank)--"
+469 "--Blue Mark (The Path of Light)--" duration 4
+474 "The Path of Light" sync /Lakshmi uses The Path of Light/ window 2, 2
+
+479 "--Vril (Main Tank)--"
+479 "The Pull of Light" duration 5 sync /Lakshmi readies The Pull of Light/ window 2, 2
+485 "--Chanchala over--"
+
+#Phase 6
+491 "--Phase 6--" sync /Look on the love you have forsssaken/ window 10000
+492 "Jagadishwari" sync /Lakshmi uses Jagadishwari/ window 2, 2
+
+501 "--Refill Vril--"
+501 "Blissful Spear x3" duration 9
+504 "The Pull of Light" duration 5 sync /Lakshmi readies The Pull of Light/ window 2, 2
+
+518 "--Refill Vril--"
+518 "Blissful Spear" duration 9
+
+520 "--Blue Mark (The Path of Light)--" duration 4
+525 "The Path of Light" sync /Lakshmi uses The Path of Light/ window 2, 2
+
+527 "The Pall of Light" duration 5 sync /Lakshmi readies The Pall of Light/ window 2, 2
+
+540 "Alluring Arm" duration 3 sync /Lakshmi readies Alluring Arm/ window 2, 2
+540 "--Target Left (Blissful Hammer)--" duration 16
+540 "--Target Right x2 (Blissful Arrow)--" duration 16
+
+545 "The Pull of Light" duration 5 sync /Lakshmi readies The Pull of Light/ window 2, 2
+
+552 "--Blue Mark (The Path of Light)--" duration 4
+557 "The Path of Light" sync /Lakshmi uses The Path of Light/ window 2, 2
+558 "Blissful Spear x2"
+
+564 "Stotram" duration 3 sync /Lakshmi readies Stotram/ window 2, 2
+
+#Phase 7
+575 "--Vril--"
+575 "Chanchala" duration 4 sync /Lakshmi readies Chanchala/ window 10
+
+587 "--Phase 7"
+587 "Divine Doubt" duration 6 sync /Lakshmi readies Divine Doubt/ window 10
+
+603 "--Vril--"
+603 "The Pall of Light" duration 5 sync /Lakshmi readies The Pall of Light/ window 2, 2
+
+616 "Jagadishwari" sync /Lakshmi uses Jagadishwari/ window 2, 2
+
+625 "--Refill Vril--"
+625 "Blissful Spear" duration 9
+
+630 "--Vril--"
+630 "Divine Desire" duration 5 sync /Lakshmi readies Divine Desire/ window 10
+
+640 "--Refill Vril--"
+640 "Blissful Spear x3" duration 9
+
+644 "--Vril--"
+644 "The Pall of Light" duration 5 sync /Lakshmi readies The Pall of Light/ window 2, 2
+
+657 "--Vril--"
+657 "Stotram" duration 3 sync /Lakshmi readies Stotram/ window 2, 2
+662 "--Chanchala over--"
+
+#Phase 8
+670 "Alluring Arm" duration 3 sync /Lakshmi readies Alluring Arm/ window 2, 2
+670 "--Target Left x2 (Blissful Hammer)--" duration 16
+670 "--Target Right x2 (Blissful Arrow)--" duration 16
+
+676 "The Pall of Light" duration 5 sync /Lakshmi readies The Pall of Light/ window 2, 2
+
+683 "--Blue Mark (The Path of Light)--" duration 4
+689 "The Path of Light" sync /Lakshmi uses The Path of Light/ window 2, 2
+689 "Blissful Spear"
+
+693 "Stotram" duration 3 sync /Lakshmi readies Stotram/ window 2, 2
+
+701 "The Pull of Light" duration 5 sync /Lakshmi readies The Pull of Light/ window 2, 2
+
+713 "Alluring Arm" duration 3 sync /Lakshmi readies Alluring Arm/ window 2, 2
+713 "--Target Left x2 (Blissful Hammer)--" duration 16
+713 "--Target Right x3 (Blissful Arrow)--" duration 16
+731 "Blissful Spear"
+
+731 "The Pall of Light" duration 5 sync /Lakshmi readies The Pall of Light/ window 2, 2
+
+738 "--Blue Mark (The Path of Light)--" duration 4
+744 "The Path of Light" sync /Lakshmi uses The Path of Light/ window 2, 2
+
+748 "Stotram" duration 3 sync /Lakshmi readies Stotram/ window 2, 2
+
+759 "Chanchala" duration 4 sync /Lakshmi readies Chanchala/ window 10
+
+764 "--Vril--"
+764 "Divine Denial" duration 5 sync /Lakshmi readies Divine Denial/ window 10
+784 "Divine Denial (Enrage)"

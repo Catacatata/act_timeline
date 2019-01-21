@@ -1,0 +1,197 @@
+# Deltascape V3.0 (Savage) - Halicarnassus
+
+# Add the following to ACT config:
+# <Trigger R="14:2306:Halicarnassus" SD="Swords Positions" ST="3" CR="F" C="O3S" T="F" TN="" Ta="F" />
+# <Trigger R="14:2308:Halicarnassus" SD="Briar" ST="3" CR="F" C="O3S" T="F" TN="" Ta="F" />
+# <Trigger R="14:230A:Halicarnassus" SD="Go Blue" ST="3" CR="F" C="O3S" T="F" TN="" Ta="F" />
+# <Trigger R="14:230E:Halicarnassus" SD="Books Positions" ST="3" CR="F" C="O3S" T="F" TN="" Ta="F" />
+# <Trigger R="Halicarnassus readies Oink" SD="Oink Stack" ST="3" CR="F" C="O3S" T="F" TN="" Ta="F" />
+# <Trigger R="Halicarnassus readies Ribbit" SD="Ribbit Ribbit" ST="3" CR="F" C="O3S" T="F" TN="" Ta="F" />
+# <Trigger R="Halicarnassus readies Squelch" SD="Squelch Look Away" ST="3" CR="F" C="O3S" T="F" TN="" Ta="F" />
+
+alertall "Critical Hit" before 1 sound "tts Tank Buster"
+alertall "Spellblade Holy" before 2 sound "tts Spellblade Holy"
+alertall "Dimensional Wave" before 1 sound "tts AOE"
+alertall "Place Token" before 1 sound "tts Place Token"
+alertall "Place Dark Token" before 1 sound "tts Place Dark Token"
+alertall "Mindjack" before 1 sound "tts Mindjack"
+# alertall "The Queen's Waltz (Swords)" before 0 sound "tts Swords Positions"
+# alertall "The Queen's Waltz (Briar)" before 0 sound "tts Briar"
+# alertall "The Queen's Waltz (Pillars)" before 0 sound "tts Go Blue"
+# alertall "The Queen's Waltz (Books)" before 2 sound "tts Books Positions"
+# alertall "The Queen's Waltz (Swords/Books)" before 2 sound "tts Swords or Books"
+# alertall "The Queen's Waltz (Blue/Briar)" before 2 sound "tts Blue or Briar"
+# alertall "The Queen's Waltz (Random)" before 2 sound "tts Random Waltz"
+# alertall "Oink" before 1 sound "tts Oink Stack"
+# alertall "Ribbit" before 1 sound "tts Ribbit Ribbit"
+# alertall "Squelch" before 1 sound "tts Squelch Look Away"
+alertall "Magic Hammer" before 2 sound "tts Magic Hammer"
+alertall "The Playing Field (Enrage)" before 0 sound "tts Enrage"
+
+alertall "--Move--" before 0 sound "tts Move"
+alertall "--Jump--" before 2 sound "tts Jump"
+alertall "--4 AOEs--" before 0 sound "tts 4 AOEs"
+alertall "--Double Spellblade--" before 2 sound "tts Double Spellblade"
+
+0 "--Stop--" sync /Removing combatant Halicarnassus/ window 10000 jump 0
+
+#Phase 1 - 
+1 "--Start--" sync /There is no escape/ window 10000
+7 "Critical Hit" duration 4 sync /Halicarnassus readies Critical Hit/ window 10, 10
+17 "Spellblade Holy" duration 3 sync /Halicarnassus begins casting Spellblade Holy/ window 10, 10
+21 "Pole Shift" duration 5 sync /Halicarnassus readies Pole Shift/ window 10, 10
+
+33 "The Queen's Waltz (Swords)" duration 5 sync /Halicarnassus readies The Queen's Waltz/ window 10, 10
+41 "Haste" duration 2 sync /Halicarnassus readies Haste/ window 2, 2
+44 "Spellblade (Random)" duration 2
+48 "Dimensional Wave" duration 4 sync /Halicarnassus begins casting Dimensional Wave/ window 10, 10
+
+58 "The Playing Field" duration 3 sync /Halicarnassus readies The Playing Field/ window 2, 2
+63 "Oink" duration 4 sync /Halicarnassus readies Oink/ window 10, 10
+69 "The Game" duration 4 sync /Halicarnassus readies The Game/ window 10, 10
+
+#Phase 2 - Grass
+80 "--Phase 2--" sync /That concludes the first round/ window 10000
+80 "Panel Swap" duration 3
+
+87 "The Queen's Waltz (Briar)" duration 5 sync /Halicarnassus readies The Queen's Waltz/ window 10, 10
+93 "--Move--"
+94 "Spellblade Fire III" duration 3
+99 "Haste" duration 2 sync /Halicarnassus readies Haste/ window 2, 2
+102 "Spellblade Thunder III" duration 3
+107 "Critical Hit" duration 4 sync /Halicarnassus readies Critical Hit/ window 10, 10
+112 "Dimensional Wave" duration 4 sync /Halicarnassus begins casting Dimensional Wave/ window 10, 10
+
+119 "Place Token" duration 3 sync /Halicarnassus readies Place Token/ window 10, 10
+124 "White Flame (Add)"
+131 "Haste" duration 2 sync /Halicarnassus readies Haste/ window 2, 2
+131 "White Wind" duration 2
+134 "Spellblade Blizzard III" duration 2
+
+141 "Mindjack" duration 3 sync /Halicarnassus readies Mindjack/ window 2, 2
+142 "White Wind" duration 2
+151 "The Queen's Waltz (Briar)" duration 5 sync /Halicarnassus readies The Queen's Waltz/ window 10, 10
+
+158 "Spellblade Fire III" duration 2
+163 "Dimensional Wave" duration 4 sync /Halicarnassus begins casting Dimensional Wave/ window 10, 10
+
+#Phase 3 - Cave
+171 "--Phase 3--" sync /You've done well to survive the second round/ window 10000
+171 "Panel Swap" duration 3
+
+176 "Place Token" duration 3 sync /Halicarnassus readies Place Token/ window 10, 10
+180 "Great Dragon (Add)"
+
+185 "The Queen's Waltz (Blue)" duration 5 sync /Halicarnassus readies The Queen's Waltz/ window 10, 10
+192 "Ribbit" duration 3 sync /Halicarnassus readies Ribbit/ window 2, 2
+198 "Dimensional Wave" duration 4 sync /Halicarnassus begins casting Dimensional Wave/ window 10, 10
+211 "Critical Hit" duration 4 sync /Halicarnassus readies Critical Hit/ window 10, 10
+
+224 "Place Dark Token" duration 3 sync /Halicarnassus readies Place Dark Token/ window 10, 10
+228 "Soul Reaper x4 (Add)"
+230 "Gusting Gouge x3" duration 8
+230 "Cross Reaper" duration 9
+234 "The Queen's Waltz (Blue)" duration 5 sync /Halicarnassus readies The Queen's Waltz/ window 10, 10
+
+241 "Haste" duration 2 sync /Halicarnassus readies Haste/ window 2, 2
+244 "Spellblade (Random)" duration 2
+248 "Dimensional Wave" duration 3 sync /Halicarnassus begins casting Dimensional Wave/ window 10, 10
+
+#Phase 4 - Library
+254 "--Phase 4--" sync /But it's only a matter of time before you crumble/ window 10000
+254 "Panel Swap" duration 3
+
+259 "The Queen's Waltz (Books)" duration 5 sync /Halicarnassus readies The Queen's Waltz/ window 10, 10
+267 "Oink" duration 4 sync /Halicarnassus readies Oink/ window 10, 10
+
+273 "Place Token" duration 3 sync /Halicarnassus readies Place Token/ window 10, 10
+277 "Apanda (Add)"
+284 "The Queen's Waltz (Books)" duration 5 sync /Halicarnassus readies The Queen's Waltz/ window 10, 10
+289 "Magic Hammer" duration 3
+
+291 "Squelch" duration 4 sync /Halicarnassus readies Squelch/ window 2, 2
+297 "Dimensional Wave" duration 3 sync /Halicarnassus begins casting Dimensional Wave/ window 10, 10
+303 "Critical Hit" duration 4 sync /Halicarnassus readies Critical Hit/ window 10, 10
+315 "Dimensional Wave" duration 3 sync /Halicarnassus begins casting Dimensional Wave/ window 10, 10
+
+321 "Spellblade Holy" duration 3 sync /Halicarnassus begins casting Spellblade Holy/ window 10, 10
+327 "The Queen's Waltz (Books)" duration 5 sync /Halicarnassus readies The Queen's Waltz/ window 10, 10
+338 "Dimensional Wave" duration 3 sync /Halicarnassus begins casting Dimensional Wave/ window 10, 10
+
+#Phase 5 - Final
+347 "--Phase 5--" sync /Four rounds over yet you still stand/ window 10000
+347 "Panel Swap" duration 3
+
+352 "The Playing Field" duration 3 sync /Halicarnassus readies The Playing Field/ window 2, 2
+361 "Ribbit/Oink/Squelch" duration 4
+368 "Ribbit/Oink/Squelch" duration 4
+374 "Ribbit/Oink/Squelch" duration 4
+380 "The Game" duration 4 sync /Halicarnassus readies The Game/ window 10, 10
+
+391 "--Jump--"
+392 "The Queen's Waltz (Swords/Books)" duration 5 sync /Halicarnassus readies The Queen's Waltz/ window 10, 10
+403 "Spellblade Holy" duration 3 sync /Halicarnassus begins casting Spellblade Holy/ window 10, 10
+407 "Pole Shift" duration 5 sync /Halicarnassus readies Pole Shift/ window 10, 10
+418 "Critical Hit" duration 4 sync /Halicarnassus readies Critical Hit/ window 10, 10
+
+428 "Mindjack" duration 3 sync /Halicarnassus readies Mindjack/ window 2, 2
+433 "Place Dark Token" duration 3 sync /Halicarnassus readies Place Dark Token/ window 10, 10
+437 "Soul Reaper x8 (Add)"
+440 "Gusting Gouge x4" duration 8
+440 "Cross Reaper" duration 9
+440 "Stench of Death x4" duration 9
+
+451 "--Jump--"
+452 "The Queen's Waltz (Blue/Briar)" duration 5 sync /Halicarnassus readies The Queen's Waltz/ window 10, 10
+466 "Dimensional Wave" duration 3 sync /Halicarnassus begins casting Dimensional Wave/ window 10, 10
+
+476 "--Double Spellblade--"
+476 "Haste" duration 2 sync /Halicarnassus readies Haste/ window 2, 2
+479 "Spellblade (Random)" duration 3
+483 "Spellblade (Random)" duration 3
+488 "Dimensional Wave" duration 3 sync /Halicarnassus begins casting Dimensional Wave/ window 10, 10
+
+499 "Place Token" duration 3 sync /Halicarnassus readies Place Token/ window 10, 10
+503 "Iron Giant (Add)"
+503 "Ninja x6 (Add)"
+
+508 "Haste III" duration 4 sync /Halicarnassus readies Haste III/ window 10000
+513 "--4 AOEs--"
+513 "Dimensional Wave (1)" duration 3 sync /Halicarnassus begins casting Dimensional Wave/ window 2, 2
+515 "Overheat" duration 3
+518 "Dimensional Wave (2)" duration 3 sync /Halicarnassus begins casting Dimensional Wave/ window 2, 2
+524 "Dimensional Wave (3)" duration 3 sync /Halicarnassus begins casting Dimensional Wave/ window 2, 2
+529 "Dimensional Wave (4)" duration 3 sync /Halicarnassus begins casting Dimensional Wave/ window 2, 2
+
+535 "--Jump--"
+536 "The Queen's Waltz (Random)" duration 5 sync /Halicarnassus readies The Queen's Waltz/ window 10, 10
+542 "Spellblade (Random)" duration 2
+
+551 "Dimensional Wave" duration 2 sync /Halicarnassus begins casting Dimensional Wave/ window 10, 10
+557 "Critical Hit" duration 4 sync /Halicarnassus readies Critical Hit/ window 10, 10
+
+566 "--Jump--"
+567 "The Queen's Waltz (Swords/Books)" duration 5 sync /Halicarnassus readies The Queen's Waltz/ window 10, 10
+578 "Spellblade Holy" duration 3 sync /Halicarnassus begins casting Spellblade Holy/ window 10, 10
+582 "Pole Shift" duration 5 sync /Halicarnassus readies Pole Shift/ window 10, 10
+593 "Critical Hit" duration 4 sync /Halicarnassus readies Critical Hit/ window 10, 10
+
+603 "Mindjack" duration 3 sync /Halicarnassus readies Mindjack/ window 2, 2
+608 "Place Dark Token" duration 3 sync /Halicarnassus readies Place Dark Token/ window 10, 10
+612 "Soul Reaper x8 (Add)"
+615 "Gusting Gouge x4" duration 8
+615 "Cross Reaper" duration 9
+615 "Stench of Death x4" duration 9
+
+626 "--Jump--"
+627 "The Queen's Waltz (Blue/Briar)" duration 5 sync /Halicarnassus readies The Queen's Waltz/ window 10, 10
+641 "Dimensional Wave" duration 3 sync /Halicarnassus begins casting Dimensional Wave/ window 10, 10
+
+651 "--Double Spellblade--"
+651 "Haste" duration 2 sync /Halicarnassus readies Haste/ window 2, 2
+654 "Spellblade (Random)" duration 2
+659 "Spellblade (Random)" duration 2
+
+664 "Dimensional Wave" duration 3 sync /Halicarnassus begins casting Dimensional Wave/ window 10, 10
+675 "The Playing Field (Enrage)" duration 3 sync /Halicarnassus readies The Playing Field/ window 2, 2
+680 "The Game (Enrage)" duration 4 sync /Halicarnassus readies The Game/ window 10, 10

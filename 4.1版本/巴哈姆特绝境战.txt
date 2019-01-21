@@ -1,0 +1,232 @@
+# Unending Coil of Bahamut (Ultimate)
+
+hideall "--重置--"
+hideall "--同步--"
+
+0 "--重置--" sync /:Removing combatant 至尊巴哈姆特\.  Max HP: 13751450/ window 10000 jump 0
+
+##### 双塔尼亚 #####
+### 双塔尼亚 P1: 100% -> 75%
+0.0 "开始" sync /:战斗开始！/ window 0,1
+7.0 "--同步--" sync /:双塔尼亚:26A8:/ window 12,12 # 垂直下落 cast
+8.0 "垂直下落" # damage
+11.0 "旋风" # start of cast bar
+17.5 "火球" # damage, 6.5s after 点名
+24.0 "死刑" # end of cast bar
+28.5 "垂直下落" # damage
+30.5 "旋风" # start of cast bar
+37.0 "火球" # damage, 6.5s after 点名
+40.0 "--拘束器掉--"
+
+
+### 双塔尼亚 P2: 75% -> 45%
+48.5 "液体地狱 x5" duration 5
+53.0 "魔力炼成" sync /14:26AE:双塔尼亚/ window 30,15 # start of cast bar
+60.0 "液体地狱 x5" duration 5
+70.5 "死刑" # end of cast bar
+74.5 "魔力炼成" # start of cast bar
+79.0 "旋风" # start of cast bar
+88.0 "垂直下落" # damage
+93.0 "液体地狱 x5" duration 5
+101.0 "--拘束器掉--"
+
+
+### 双塔尼亚 P3: 45% -> 0%
+113.0 "液体地狱 x5" duration 5
+113.5 "魔力炼成 x2" sync /14:26AE:双塔尼亚/ window 10,20 # start of cast bar
+121.0 "5连火" duration 4.5
+128.0 "火球" # damage
+135.0 "死刑" # end of cast bar
+140.0 "垂直下落" # damage
+143.0 "魔力炼成 x2" # start of cast bar
+147.2 "旋风" # start of cast bar
+155.5 "垂直下落" # damage
+157.5 "液体地狱 x5" duration 5
+162.5 "魔力炼成 x2" # start of cast bar
+170.0 "5连火" duration 4.5
+177.0 "火球" # damage
+184.0 "死刑" # end of cast bar
+186.0 "以太失控狂暴"
+
+
+##### 奈尔 #####
+200.0 "天崩地裂" sync /:诸神黄昏:26B8:/ window 200,0
+205.5 "陨石流 x4" # damage
+209.5 "陨石流 x4" # damage
+212.0 "月华冲" # damage
+214.5 "巴哈姆特之爪 1" # first hit
+231.0 "月流电圈 + 光束/钢铁战车" duration 8 # rp text -> ~2nd mechanic
+235.5 "雷翼 x2" # explosion
+240.5 "死亡宣告 x2" # debuffs
+243.0 "火球 (1)" # explosion
+243.5 "救世之翼 x2" # first puddle
+248.5 "巴哈姆特之爪 2" # first hit
+
+258.0 "火球 (2)" # explosion
+260.0 "热离子 + 月流电圈/钢铁战车" duration 8 # rp text -> ~2nd mechanic
+261.0 "雷翼 x2" # explosion
+268.0 "救世之翼 x3" # first puddle
+270.0 "死亡宣告 x3" # debuffs
+280.0 "雷翼 x2" # explosion
+284.0 "火球 (3)" # explosion
+288.5 "巴哈姆特之爪 3"
+292.5 "俯冲 + 月流电圈/钢铁战车" duration 8 # rp text -> ~2nd mechanic
+305.5 "火球 (4)" # explosion
+306.0 "死亡宣告 x3" # debuffs
+307.5 "雷翼 x2" # explosion
+308.0 "救世之翼 x3" # first puddle
+325.0 "凶鸟尖喙" # end of castbar
+
+330.0 "点名 1" # symbol appearing, lasts 7 seconds
+334.5 "点名 2" # symbol appearing
+339.0 "点名 3" # symbol appearing
+342.0 "爆破俯冲 #1" # puff under dragon for 俯冲
+343.5 "--不可选中--"
+346.0 "陨石/俯冲 或 俯冲/光束" duration 3 # first mechanic -> second
+346.5 "爆破俯冲 #2"
+351.0 "爆破俯冲 #3"
+
+353.5 "巴哈姆特之爪 4" # first hit
+365.0 "随机组合攻击" duration 8 # rp text -> ~second mechanic
+376.5 "随机组合攻击" duration 8 # rp text -> ~second mechanic
+392.0 "凶鸟尖喙" # end of castbar
+395.0 "巴哈姆特之爪 5"
+
+408.0 "百万核爆狂暴"
+
+
+##### 巴哈姆特 #####
+500.0 "第七灵灾" sync /:至尊巴哈姆特:26D1:/ window 500,0 # damage
+503.0 "灵灾之炎" # damage
+508.0 "灵灾之焰" # damage
+511.0 "--可选中--"
+517.0 "核爆吐息" # animation
+524.7 "平击" # end of castbar
+
+### 进军的三重奏
+528.5 "--同步--" sync /14:26E2:至尊巴哈姆特/ window 30,10
+532.0 "进军的三重奏"
+534.5 "--不可选中--"
+540.5 "旋风 俯冲" # end of cast
+544.0 "大圈" # appearing
+545.3 "百万核爆" # damage
+549.5 "分摊" # damage
+547.5 "风暴之翼" duration 7 # tether -> tornado
+552.0 "大地摇动 x3" # damage
+
+557.5 "核爆吐息" # animation
+565.0 "平击" # end of castbar
+
+### 黑炎的三重奏
+569.8 "--同步--" sync /14:26E3:至尊巴哈姆特/ window 70,10
+573.2 "黑炎的三重奏" # end of castbar
+579.0 "液体地狱 x5" duration 4.5
+582.0 "热离子 光束" # damage
+582.5 "旋风 俯冲"
+589.0 "超新星 x4" duration 5
+590.5 "分摊" # damage
+591.5 "塔" # disappearing
+592.5 "--同步--" sync /14:26D6:至尊巴哈姆特/ window 100,10
+598.0 "十亿核爆" # end of cast bar
+
+608.0 "核爆吐息 1" # animation
+610.0 "核爆吐息 2" # animation
+612.0 "核爆吐息 3" # animation
+
+### 灾厄的三重奏
+621.0 "--同步--" sync /14:26E4:至尊巴哈姆特/ window 130,10
+624.5 "灾厄的三重奏" # end of cast bar
+629.2 "俯冲 月流电圈 组合" duration 8 # rp text -> second mechanic
+641.5 "风暴之翼" # damage
+642.2 "以太失控" # damage
+643.5 "--同步--" sync /14:26D6:至尊巴哈姆特/ window 30,10
+645.5 "陨石流" # damage
+649.0 "十亿核爆" # end of castbar
+
+655.0 "核爆吐息" # animation
+663.8 "平击" # end of castbar
+669.5 "核爆吐息" # animation
+
+#### 天地的三重奏
+673.5 "--同步--" sync /14:26E5:至尊巴哈姆特/ window 170,10
+677.0 "天地的三重奏" # end of castbar
+682.0 "点名出现"
+686.0 "旋风 俯冲"
+689.0 "大圈" # appearing
+693.7 "天崩地裂" # damage
+697.2 "塔"
+700.0 "超新星 x3" duration 3.5
+708.5 "火球分摊"
+707.2 "--同步--" sync /14:26D6:至尊巴哈姆特/ window 30,10
+712.7 "十亿核爆" # end of castbar
+
+722.5 "核爆吐息 1" # animation
+724.5 "核爆吐息 2"
+726.5 "核爆吐息 3"
+
+### 连击的三重奏
+734.5 "--同步--" sync /14:26E6:至尊巴哈姆特/ window 200,10
+738 "连击的三重奏" # end of cast
+743 "魔力炼成 x3" # 点名
+747.5 "陨石流 (dps)" # first damage
+749 "魔力炼成 x3" # 点名
+751.5 "陨石流 (T/H)" #first damage
+754.5 "大地摇动 x4" # 点名
+760 "大地摇动 x4" # 点名
+767 "--同步--" sync /14:26D6:至尊巴哈姆特/ window 30,10
+772.5 "十亿核爆" # end of castbar
+
+783.8 "平击" # end of castbar
+787.5 "核爆吐息" # animation
+
+### 群龙的八重奏
+791.5 "--同步--" sync /14:26E7:至尊巴哈姆特/ window 200,10
+795.0 "群龙的八重奏"
+804.0 "奈尔 点名"
+809.0 "奈尔 俯冲"
+821.0 "巴哈 点名"
+830.0 "双塔 点名"
+833.0 "分摊"
+834.5 "塔"
+834.5 "旋风 俯冲"
+
+
+##### 小怪阶段: 奈尔 + 双塔 #####
+904 "--同步--" sync /:至尊巴哈姆特:26E8:/ window 1000,0
+914 "垂直下落/利爪"
+917 "液体地狱 x5"
+923 "魔力炼成 x3" sync /14:26AE:双塔尼亚/ window 30,10
+930 "旋风"
+933 "三黑球"
+947 "旋风"
+958 "百万核爆"
+966 "死刑/凶鸟尖喙"
+970 "垂直下落/利爪"
+978 "液体地狱 x5"
+985 "魔力炼成 x3" sync /14:26AE:双塔尼亚/ window 30,10
+992 "旋风"
+996 "三黑球"
+1009 "旋风"
+1021 "死刑/凶鸟尖喙"
+1033 "百万核爆"
+1044 "狂暴" # ???
+
+
+##### 黄金巴哈姆特 #####
+1158 "万亿核爆" sync /:至尊巴哈姆特:26E9:/ window 1200,0
+1189 "--同步--" sync /:至尊巴哈姆特:2707:/ window 1200,0 # Glowing ball
+1203.3 "--可选中--"
+1209 "无尽顿悟 #1" #sync /:至尊巴哈姆特:26EC:/
+1215 "死亡轮回 #1" #sync /:至尊巴哈姆特:26EA:/
+1228 "百京核爆 #1" #sync /:至尊巴哈姆特:26EF:/
+1247 "死亡轮回 #2" #sync /:至尊巴哈姆特:26EA:/
+1265 "无尽顿悟 #2" #sync /:至尊巴哈姆特:26EC:/
+1277 "百京核爆 #2" #sync /:至尊巴哈姆特:26EF:/
+1298 "无尽顿悟 #3" #sync /:至尊巴哈姆特:26EC:/
+1310 "死亡轮回 #3" #sync /:至尊巴哈姆特:26EA:/
+1327 "百京核爆 #3" #sync /:至尊巴哈姆特:26EF:/
+1348 "无尽顿悟 #4" #sync /:至尊巴哈姆特:26EC:/
+1360 "死亡轮回 #4" #sync /:至尊巴哈姆特:26EA:/
+1378 "百京核爆 #4" #sync /:至尊巴哈姆特:26EF:/
+1399 "无尽顿悟 #5" #sync /:至尊巴哈姆特:26EC:/
+1413 "无尽顿悟 狂暴" #sync /:至尊巴哈姆特:26EE:/

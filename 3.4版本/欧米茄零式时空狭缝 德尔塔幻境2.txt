@@ -1,0 +1,204 @@
+# Alexander - The Breath of the Creator (Savage) - A10S / C2S
+# Created by Shasta Kota of Death & Taxes (DnT) on Gilgamesh
+# Shasta's reddit: /u/shastaxc
+# Last Updated: 10/6/2016
+# 汉化翻译 by 卡塔利亚
+
+###定制你自己的时间轴，在不想要的提示前加上#标签
+###他们就不会出现在你的时间轴上！
+
+#隐藏所有 "--重置--"
+#隐藏所有 "枪击"
+###DPS能隐藏这些
+#隐藏所有 "AoE"
+
+###治疗职业能隐藏这些
+
+
+###坦克能隐藏这些
+
+
+##############################################################
+################## Windows 8 & 10 音效 ##################
+#删去前方的#标签来选择声音
+#define speaker "voice" "Microsoft Huihui Desktop" 0 100
+#define speaker "voice" "Microsoft Hanhan Desktop" 0 100
+
+#################### Windows 7 音效 ####################
+#删去前方的#标签来选择声音
+#define speaker "voice" "Microsoft Lili" 0 100
+
+################ 定制语音播报 #####################
+########删去前方的#标签来选择语音播报内容
+#alertall "单发填充" before 3 speak "voice" "看颜色"
+#alertall "单发填充 绿" before 7 speak "voice" "集合 远离"
+#alertall "T死刑" before 5 speak "voice" "死刑"
+#alertall "枪击击中" before 3 speak "voice" "两侧"
+#alertall "中央范围AoE" before 4 speak "voice" "中间移动"
+#alertall "哥布流后之先" before 4 speak "voice" "停止行动"
+#alertall "铁球掉落" before 3 speak "voice" "两侧"
+#alertall "AOE圆圈" before 3 speak "voice" "靠近按钮"
+#alertall "铁球掉落" before 5 speak "voice" "两侧移动"
+#alertall "哥布流大回旋斩 + 哥布流断瀑斩" before 0 speak "voice" "连线"
+#alertall "哥布流月牙斩" before 7 speak "voice" "踩刺陷阱"
+#alertall "蒸汽滚轮" before 4 speak "voice" "移动"
+#alertall "蒸汽滚轮走了" before 1 speak "voice" "好棒棒哦"
+#alertall "LB3" before 0 speak "voice" "LBLBLBLB"
+
+##############################################################
+0 "--重置--" sync /科学万能处刑场的封锁解除了/ window 10000 jump 0
+
+################# Phase 1
+0 "--开始--" sync /科学万能处刑场被封锁还有15秒/ window 10000
+9 "AoE"
+14 "AoE"
+21 "单发填充"
+28 "陷阱"
+37 "单发填充"
+51 "准备AOE"
+61 "T死刑"
+
+################# Phase 2; Pushes at 85%
+165 "枪击" sync /发动了“枪击”/ window 165,0
+168 "AoE" sync /发动了“哥布流大怒震”/ window 140,0
+172 "陷阱"
+175 "枪击击中"
+178 "中央范围AoE"
+187 "哥布流后之先"
+189 "虚兵出现"
+194 "单发填充 绿"
+202 "AoE"
+203 "哥布流断瀑斩"
+212 "T死刑"
+224 "陷阱"
+228 "铁球掉落"
+233 "AOE圆圈"
+242 "准备AOE"
+245 "AoE"
+249 "AoE"
+262 "二连填充"
+275 "单发填充/哥布流后之先"
+281 "AoE"
+291 "T死刑"
+399 ""
+399 ""
+399 ""
+399 ""
+399 ""
+399 ""
+399 ""
+399 ""
+399 ""
+399 ""
+
+
+################# Phase 3; Pushes at 60%
+400 "" sync /Added new combatant 6号哥布林压路机/ window 400,0
+412 "青蓝手炮"
+412 "火圈 #1 落下"
+420 "火圈 #2 落下"
+420 "蒸汽滚轮"
+430 "青蓝手炮"
+434 "AoE"
+438 "AoE"
+440 "蒸汽滚轮"
+446 "青蓝手炮"
+446 "火圈 #1 落下"
+454 "火圈 #2 落下"
+458 "蒸汽滚轮"
+466 "青蓝手炮"
+471 "AoE"
+475 "AoE"
+477 "蒸汽滚轮"
+483 "青蓝手炮"
+484 "AoE"
+490 "AoE"
+494 "AoE"
+498 "AoE"
+499 "蒸汽滚轮走了"
+591 ""
+591 ""
+591 ""
+591 ""
+591 ""
+591 ""
+591 ""
+591 ""
+591 ""
+591 ""
+
+################# Phase 4
+592 "" sync /发动了“哥布林冲锋”/ window 190,0
+600 "T死刑" sync /发动了“哥布流哥布林冲锋”/ window 200,0
+612 "三连填充" sync /发动了“三连填充”/ window 600,0
+629 "AoE"
+639 "AoE"
+645 "虚兵出现"
+648 "单发填充 绿"
+658 "哥布流大回旋斩 + 哥布流断瀑斩"
+661 "连线出现"
+667 "旋转 AoE"
+673 "旋转 AoE"
+679 "旋转 AoE"
+
+783 "AoE" sync /发动了“哥布流大怒震”/ window 125,0
+789 "T死刑"
+794 "BOSS猛撞"
+804 "哥布流月牙斩"
+809 "BOSS猛撞"
+815 "单发填充/哥布流后之先"
+821 "AoE"
+825 "AoE"
+836 "准备火圈" #Brighteyes Prey applies
+840 "青蓝手炮"
+840 "火圈落下"
+850 "火圈落下"
+851 "单发填充"
+867 "准备AOE"
+874 "T死刑"
+882 "陷阱"
+886 "中央范围AoE"
+890 "铁球掉落"
+894 "AOE圆圈"
+898 "小怪 x3出现"
+898 "AoE"
+902 "AoE"
+909 "哥布流后之先"
+912 "LB3"
+
+########### This marks phase repeat
+923 "T死刑" sync /发动了“哥布流哥布林冲锋”/ window 30,0
+935 "三连填充" sync /发动了“三连填充”/ window 200,0
+952 "AoE"
+962 "AoE"
+968 "虚兵出现"
+971 "单发填充 绿"
+981 "哥布流大回旋斩 + 哥布流断瀑斩"
+984 "连线出现"
+990 "旋转 AoE"
+996 "旋转 AoE"
+1002 "旋转 AoE"
+
+1106 "AoE" sync/发动了“哥布流大怒震”/ window 125,0
+1112 "T死刑"
+1117 "BOSS猛撞"
+1127 "哥布流月牙斩"
+1132 "BOSS猛撞"
+1138 "单发填充/哥布流后之先"
+1144 "AoE"
+1148 "AoE"
+1159 "准备火圈" #Brighteyes Prey applies
+1163 "青蓝手炮"
+1163 "火圈落下"
+1173 "火圈落下"
+1174 "单发填充"
+1190 "准备AOE"
+1197 "T死刑"
+1205 "陷阱"
+1209 "中央范围AoE"
+1213 "铁球掉落"
+1217 "AOE圆圈"
+1221 "小怪 x3出现"
+1221 "AoE"
+1225 "AoE"
+1232 "哥布流后之先"

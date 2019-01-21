@@ -1,0 +1,228 @@
+# 欧米茄零式时空狭缝 德尔塔幻境2 - 灾变者
+# 汉化翻译 by 卡塔利亚
+
+###定制你自己的时间轴，在不想要的提示前加上#标签
+###他们就不会出现在你的时间轴上！
+
+##############################################################
+################## Windows 8 & 10 音效 ##################
+#删去前方的#标签来选择声音
+#define speaker "voice" "Microsoft Huihui Desktop" 0 100
+#define speaker "voice" "Microsoft Hanhan Desktop" 0 100
+
+#################### Windows 7 音效 ####################
+#删去前方的#标签来选择声音
+#define speaker "voice" "Microsoft Lili" 0 100
+
+#################### NGA汉化版限定 ####################
+#删去前方的#标签来选择声音
+#define speaker "voice" 0 100
+
+################ 定制语音播报 #####################
+########删去或添加前方的#标签来选择语音播报内容
+alertall "大地震" before 0 speak "voice" "上天"
+alertall "重力波" before 0 speak "voice" "AOE"
+alertall "重力操纵" before 0 speak "voice" "分摊"
+alertall "死神之瞳" before 0 speak "voice" "背对"
+alertall "邪球" before 0 speak "voice" "坦克死刑"
+alertall "触手乱舞 (T奶)" before 0 speak "voice" "T奶站位"
+alertall "触手乱舞 (DPS)" before 0 speak "voice" "DPS站位"
+alertall "重力-100" before 2 speak "voice" "两边跑位"
+alertall "重力波 (狂暴)" before 0 speak "voice" "狂暴"
+
+alertall "--去中间--" before 0 speak "voice" "去中间"
+alertall "--上天--" before 0 speak "voice" "上天"
+alertall "--T奶站位上天--" before 0 speak "voice" "T奶站位上天"
+alertall "--DPS站位上天--" before 0 speak "voice" "DPS站位上天"
+alertall "--呆地上--" before 0 speak "voice" "呆地上"
+
+0 "--重置--" sync /Removing combatant 灾变者/ window 10000 jump 0
+
+#Phase 1 - 
+1 "--开始--" sync /灾变者正在发动“大地震”/ window 2, 2 jump 13
+7 "地震"
+10 "地震" sync /灾变者发动了“地震”/ window 2, 2
+13 "大地震" duration 5 sync /灾变者正在发动“大地震”/ window 10
+
+20 "--下车点名 x2--"
+25 "重力100"
+
+30 "暗黑光" duration 3 sync /灾变者正在发动“暗黑光”/ window 10
+33 "--去中间--"
+35 "石化球 x4 " duration 20
+35 "石化球II x4 " duration 20
+46 "爆炸 x8"
+47 "重力波" duration 3 sync /灾变者正在发动“重力波”/ window 10
+
+55 "重力操纵" duration 5 sync /灾变者正在发动“重力操纵”/ window 10
+62 "--分摊点名 x2--" duration 4
+
+68 "--上天--"
+74 "诅咒波" sync /灾变者发动了“诅咒波”/ window 2, 2
+79 "诅咒波" sync /灾变者发动了“诅咒波”/ window 2, 2
+83 "邪球" duration 5 sync /灾变者正在发动“邪球”/ window 10
+96 "诅咒波" sync /灾变者发动了“诅咒波”/ window 2, 2
+
+100 "触手乱舞 (T奶)" duration 5 sync /灾变者正在发动“触手乱舞”/ window 10
+107 "--T奶点名--"
+111 "死神之瞳" duration 5 sync /灾变者正在发动“死神之瞳”/ window 10
+114 "触手 x4 "
+118 "震源制造" duration 3 sync /灾变者正在发动“震源制造”/ window 10
+125 "重力波" duration 3 sync /灾变者正在发动“重力波”/ window 10
+
+130 "--下车点名 x2--"
+136 "重力100"
+140 "主震 x3"
+140 "重力波" duration 3 sync /灾变者正在发动“重力波”/ window 10
+149 "诅咒波" sync /灾变者发动了“诅咒波”/ window 2, 2
+
+153 "重力操纵" duration 5 sync /灾变者正在发动“重力操纵”/ window 10
+160 "--分摊点名 x2--" duration 4
+
+174 "诅咒波" sync /灾变者发动了“诅咒波”/ window 2, 2
+178 "邪球" duration 5 sync /灾变者正在发动“邪球”/ window 10
+191 "诅咒波" sync /灾变者发动了“诅咒波”/ window 2, 2
+
+197 "重力-100" duration 8 sync /灾变者正在发动“重力-100”/ window 10
+197 "石化球 x3 " duration 20
+197 "石化球II x3 " duration 20
+198 "--点名 x4--"
+206 "重力崩坏 x4"
+210 "死神之瞳" duration 5 sync /灾变者正在发动“死神之瞳”/ window 10
+213 "爆炸 x6"
+
+220 "--下车点名 x2--"
+226 "重力100"
+
+230 "暗黑光" duration 3 sync /灾变者正在发动“暗黑光”/ window 2, 2
+233 "--去中间--"
+236 "石化球 x4 " duration 20
+236 "石化球II x4 " duration 20
+238 "重力波" duration 3 sync /灾变者正在发动“重力波”/ window 10
+
+247 "爆炸 x8"
+247 "--分摊点名--"
+247 "--T奶站位上天--"
+253 "自由落体"
+
+258 "--下车点名 x2--"
+263 "重力100"
+
+268 "暗黑光" duration 3 sync /灾变者正在发动“暗黑光”/ window 10
+271 "--呆地上--"
+273 "石化球II x4 " duration 20
+
+276 "地震" sync /灾变者发动了“地震”/ window 2, 2
+279 "地震" sync /灾变者发动了“地震”/ window 2, 2
+
+282 "大地震" duration 5 sync /灾变者正在发动“大地震”/ window 10
+284 "爆炸 x4"
+
+292 "--下车点名 x2--"
+297 "重力100"
+
+307 "触手乱舞 (DPS)" duration 5 sync /灾变者正在发动“触手乱舞”/ window 10
+314 "--点名 x4 (DPS)--"
+318 "死神之瞳" duration 5 sync /灾变者正在发动“死神之瞳”/ window 10
+321 "触手 x4 "
+325 "震源制造" duration 3 sync /灾变者正在发动“震源制造”/ window 10
+
+332 "重力操纵" duration 5 sync /灾变者正在发动“重力操纵”/ window 10
+339 "--分摊点名 x2--" duration 4
+
+344 "暗黑光" duration 3 sync /灾变者正在发动“暗黑光”/ window 10
+346 "主震 x3"
+347 "--去中间--"
+349 "石化球 x4 " duration 20
+349 "石化球II x4 " duration 20
+
+350 "--下车点名 x2--"
+355 "重力100"
+
+360 "爆炸 x8"
+360 "--分摊点名--"
+360 "--DPS站位上天--"
+366 "自由落体"
+
+376 "诅咒波" sync /灾变者发动了“诅咒波”/ window 2, 2
+381 "诅咒波" sync /灾变者发动了“诅咒波”/ window 2, 2
+385 "邪球" duration 5 sync /灾变者正在发动“邪球”/ window 10
+398 "诅咒波" sync /灾变者发动了“诅咒波”/ window 2, 2
+
+404 "暗黑光" duration 3 sync /灾变者正在发动“暗黑光”/ window 10
+407 "--呆地上--"
+409 "石化球II x4 " duration 20
+410 "--下车点名 x2--"
+415 "重力100"
+
+420 "触手乱舞 (T奶)" duration 5 sync /灾变者正在发动“触手乱舞”/ window 10
+421 "爆炸 x4"
+428 "--T奶点名--"
+431 "死神之瞳" duration 5 sync /灾变者正在发动“死神之瞳”/ window 10
+434 "触手 x4 "
+438 "震源制造" duration 3 sync /灾变者正在发动“震源制造”/ window 10
+
+445 "重力操纵" duration 5 sync /灾变者正在发动“重力操纵”/ window 10
+453 "--分摊点名 x2--" duration 4
+
+457 "暗黑光" duration 3 sync /灾变者正在发动“暗黑光”/ window 10
+460 "主震 x3"
+460 "--去中间--"
+463 "石化球 x4 " duration 20
+463 "石化球II x4 " duration 20
+
+464 "--下车点名 x2--"
+468 "重力100"
+
+474 "--分摊点名--"
+474 "--T奶站位上天--"
+480 "自由落体"
+
+482 "--上天--"
+482 "死神之瞳" duration 5 sync /灾变者正在发动“死神之瞳”/ window 10
+
+492 "重力波" duration 3 sync /灾变者正在发动“重力波”/ window 10
+497 "诅咒波" sync /灾变者发动了“诅咒波”/ window 2, 2
+
+502 "暗黑光" duration 3 sync /灾变者正在发动“暗黑光”/ window 10
+505 "--呆地上--"
+507 "石化球II x4 " duration 20
+507 "--下车点名 x2--"
+512 "重力100"
+
+518 "诅咒波" sync /灾变者发动了“诅咒波”/ window 2, 2
+518 "爆炸 x4"
+524 "邪球" duration 5 sync /灾变者正在发动“邪球”/ window 10
+537 "诅咒波" sync /灾变者发动了“诅咒波”/ window 2, 2
+
+541 "重力操纵" duration 5 sync /灾变者正在发动“重力操纵”/ window 10
+548 "--分摊点名 x2--" duration 4
+554 "--上天--"
+
+557 "暗黑光" duration 3 sync /灾变者正在发动“暗黑光”/ window 10
+560 "--呆地上--"
+562 "--点名 x2--"
+562 "石化球II x4 " duration 20
+567 "地震" sync /灾变者发动了“地震”/ window 2, 2
+567 "重力100"
+572 "大地震" duration 5 sync /灾变者正在发动“大地震”/ window 10
+573 "爆炸 x4"
+582 "重力波" duration 3 sync /灾变者正在发动“重力波”/ window 10
+
+590 "重力-100" duration 8 sync /灾变者正在发动“重力-100”/ window 10
+590 "石化球 x3 " duration 20
+590 "石化球II x3 " duration 20
+591 "--点名 x4--"
+599 "重力崩坏 x4"
+603 "死神之瞳" duration 5 sync /灾变者正在发动“死神之瞳”/ window 10
+606 "爆炸 x6"
+
+610 "暗黑光" duration 3 sync /灾变者正在发动“暗黑光”/ window 10
+613 "--呆地上--"
+615 "--点名 x2--"
+616 "石化球II x4 " duration 20
+620 "地震" sync /灾变者发动了“地震”/ window 2, 2
+620 "重力100"
+626 "大地震" duration 5 sync /灾变者正在发动“大地震”/ window 10
+627 "爆炸 x4"
+633 "重力波 (狂暴)" duration 9 sync /灾变者正在发动“重力波”/ window 10

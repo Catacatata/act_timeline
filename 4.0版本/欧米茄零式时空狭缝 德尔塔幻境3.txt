@@ -1,0 +1,183 @@
+# 欧米茄零式时空狭缝 德尔塔幻境3 - O3S
+# Created by Shasta Kota of Death & Taxes (DnT) on Gilgamesh
+# Shasta's reddit: /u/shastaxc
+# Last Updated: 07/31/2017
+# 汉化翻译 by 卡塔利亚
+
+#############################################################
+###定制你自己的时间轴，在不想要的提示前加上#标签
+###他们就不会出现在你的时间轴上！
+
+#hideall "--重置--"
+#########DPS可隐藏
+#hideall "坦克死刑"
+#hideall "加速"
+#hideall "全屏AOE"
+#hideall "游戏领域"
+#hideall "游戏开始"
+#hideall "位置标记"
+#hideall "找安全点"
+
+#########治疗可隐藏
+#hideall "加速"
+#hideall "全屏AOE"
+#hideall "游戏领域"
+#hideall "游戏开始"
+#hideall "位置标记"
+#hideall "找安全点"
+
+#########坦克可隐藏
+#hideall "加速"
+#hideall "游戏领域"
+#hideall "游戏开始"
+#hideall "位置标记"
+#hideall "找安全点"
+
+##############################################################
+################## Windows 8 & 10 音效 ##################
+#删去前方的#标签来选择声音
+#define speaker "voice" "Microsoft Huihui Desktop" 0 100
+#define speaker "voice" "Microsoft Hanhan Desktop" 0 100
+
+#################### Windows 7 音效 ####################
+#删去前方的#标签来选择声音
+#define speaker "voice" "Microsoft Lili" 0 100
+
+#################### NGA汉化版限定 ####################
+#删去前方的#标签来选择声音
+#define speaker "voice" 0 100
+
+################ 定制语音播报 #####################
+########删去或添加前方的#标签来选择语音播报内容
+#alertall "全屏AOE" before 3 speak "voice" "AoE"
+#alertall "坦克死刑" before 3 speak "voice" "坦克死刑"
+#alertall "女王之舞 站位" before 3 speak "voice" "站位"
+#alertall "女王之舞 地刺" before 5 speak "voice" "蓝格"
+#alertall "女王之舞 书本" before 5 speak "voice" "站位"
+#alertall "猪" before 3 speak "voice" "集合"
+#alertall "青蛙" before 1 speak "voice" "背面"
+#alertall "河童" before 3 speak "voice" "背对"
+#alertall "方向BUFF" before 0 speak "voice" "看清debuff"
+#alertall "开始位移" before 2 speak "voice" "失了智"
+#alertall "魔法锤" before 5 speak "voice" "站边缘点"
+#alertall "坦克变" before 3 speak "voice" "坦克变"
+#alertall "治疗变" before 3 speak "voice" "治疗变"
+#alertall "输出变" before 3 speak "voice" "输出变"
+#alertall "位置标记" before 3 speak "voice" "小怪刷新"
+
+##############################################################
+0	"--重置--"	sync /Removing combatant 哈利卡纳苏斯/ window 1000 jump 0	
+
+########Phase 1
+0	"坦克死刑"	sync /发动了“暴击”/ window 9	#Critical Hit
+9	"魔法剑神圣"	#4 players spread/stack
+15	"磁场转换"	#Swap Places
+27	"女王之舞 站位"	#Spread around boss
+31	"加速"
+34	"随机魔法剑" #Fire, Blizz, or Thunder
+40	"全屏AOE"	#AoE
+49	"游戏领域"
+55	"猪"	#Stack with another player
+62	"游戏开始"	#Stand on role tiles
+
+########Phase 2
+71	"刷新盘面"	sync /发动了“刷新盘面”/ window 30	#Arena changes
+80	"女王之舞 荆棘"	#Applies thorny 连线
+83	"连线"	#Run from partner Healer/Tank always tethered to a DPS. Never Healer-Healer, tank-tank, tank-healer, dps-dps.
+85	"火圈"	#Spellblade Fire III
+89	"加速"
+93	"线型AOE"	#Spellblade Thunder III
+98	"坦克死刑"	#Critical Hit
+105	"全屏AOE"	#Dimensional Wave
+111	"位置标记"	#Spawns add
+112	"--白焰--"
+122	"加速"
+126	"环形AOE"	#Spellblade Blizzard III
+133	"方向BUFF"	#Applies 13s facing debuffs
+145	"女王之舞 荆棘"	#Applies thorny 连线
+146	"开始位移"
+147	"连线"	#Run from partner
+150	"火圈"	#Spellblade Fire III
+157	"全屏AOE"	#Dimensional Wave
+
+########Phase 3
+164	"刷新盘面"	sync /发动了“刷新盘面”/ window 30	#Arena changes
+170	"位置标记"	#spawns add
+171	"--巨龙--"	#Spawns add
+181	"女王之舞 地刺"	#AoE + Stand on blue tiles
+187	"青蛙"
+193	"全屏AOE"	#Dimensional Wave
+193	"龙AOE" #Frostbite
+207	"坦克死刑"	#Critical Hit
+218	"找安全点"	#spawns 5 untargetable adds
+230	"女王之舞 地刺"	#AoE + Stand on blue tiles
+232	"交叉斩击/削风"	#Middle AoE + knockback on edge tiles
+238	"随机魔法剑" #Fire, Blizz, or Thunder
+243	"全屏AOE"	#Dimensional Wave
+
+########Phase 4
+250	"刷新盘面"	sync /发动了“刷新盘面”/ window 30	#Arena changes
+257	"女王之舞 书本"	#Spread, one person per tile (Folio)
+264	"猪"	#Stack with another player
+269	"位置标记"	#Spawns add
+270	"--阿班达--"
+282	"女王之舞 书本"	#Spread, one person per tile (Folio)
+285	"魔法锤"	#Requires delay of spread for 女王之舞 for middle 4 players
+289	"河童"	#Look away from boss
+295	"全屏AOE"	#Dimensional Wave
+301	"坦克死刑"	#Critical Hit
+313	"全屏AOE"	#Dimensional Wave
+318	"魔法剑神圣"	#5 players; 3 spreads, 2 stacks. Get book buffs.
+326	"女王之舞 书本"	#Spread, one person per tile (Folio)
+337	"全屏AOE"	#Dimensional Wave
+
+########Phase 5
+345	"刷新盘面"	sync /发动了“刷新盘面”/ window 30
+350	"游戏领域"
+361	"治疗变"	#青蛙, 河童, or 猪
+367	"坦克变"	#青蛙, 河童, or 猪
+373	"输出变"	#青蛙, 河童, or 猪
+380	"游戏开始"	#Get on square by role
+392	"女王之舞"	#Spread, one person per tile (Folio)
+402	"魔法剑神圣"	#Stack/spread, only 2 people this time
+408	"磁场转换"
+418	"坦克死刑"	#Critical Hit
+427	"方向BUFF"	#Applies 13s facing debuffs
+432	"找安全点"	#Spawns 9 untargetable adds
+440 "开始位移"
+447	"召唤死形/削风"	#Middle AoE + lengthen 连线
+453	"女王之舞 地刺"	#AoE + stand on blue tiles
+467	"全屏AOE"	#Dimensional Wave
+475	"加速"
+479	"随机魔法剑" #Fire, Blizz, or Thunder
+483	"随机魔法剑" #Fire, Blizz, or Thunder
+490	"全屏AOE"	#Dimensional Wave
+500	"位置标记"	#Spawns ninja adds + iron giant
+501	"--忍者+巨人--"
+510	"过热"	sync /正在发动“过热”/ window 100
+514	"全屏AOE"	#Dimensional Wave
+520	"全屏AOE"	#Dimensional Wave
+525	"全屏AOE"	#Dimensional Wave
+531	"全屏AOE"	#Dimensional Wave
+538	"女王之舞 站位"	#Spread around boss
+543	"环形AOE"	#Spellblade Blizzard III
+553	"全屏AOE"	#Dimensional Wave
+559	"坦克死刑"	#Critical Hit
+570	"女王之舞 书本"	#Spread, one person per tile (Folio)
+579	"魔法剑神圣"	#4 players spread/stack
+585	"磁场转换"
+595	"坦克死刑"	#Critical Hit
+604	"方向BUFF"	#Applies 13s facing debuffs
+609	"找安全点"	#Spawns 9 untargetable adds
+617 "开始位移"
+623	"召唤死形/交叉斩击/削风"	#Middle AoE + knockback on edge tiles + lengthen 连线
+631	"女王之舞 荆棘"	#Applies thorny 连线
+633	"连线"	#Run from partner
+644	"全屏AOE"	#Dimensional Wave
+652	"加速"
+655	"线型AOE"	#Spellblade Thunder III
+660	"火圈"	#Spellblade Fire III
+666	"全屏AOE"	#Dimensional Wave
+676	"游戏领域"
+683	"游戏开始"	#狂暴
+693 "--狂暴--"

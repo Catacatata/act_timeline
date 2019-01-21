@@ -1,0 +1,98 @@
+# Alexander - The Cuff of the Father (Savage) - A2S
+# Created by Shasta Kota of Death & Taxes (DnT) on Gilgamesh
+# Shasta's reddit: /u/shastaxc
+
+0 "--战斗终了--" sync /第12大型机库的封锁解除了/ window 10000 jump 0
+
+# Wave 1 - 戈耳狄士兵 x2
+0 "--第一阶段--" sync /第12大型机库被封锁还有15秒/ window 100000
+
+
+# Wave 2 - 戈耳狄士兵 x2, 戈耳狄狙击手 x1, 戈耳狄铁心兵 x1
+20 "Wave 2" sync /Added new combatant 戈耳狄狙击手/ window 20,2
+#35 "治疗效果降低"
+#40 "魔法防御提升"
+
+
+# Wave 3 - 戈耳狄士兵 x3, 戈耳狄狙击手 x1, 戈耳狄铁心兵 x1, 戈耳狄硬盔兵 x1
+100 "Wave 3" sync /Added new combatant 戈耳狄硬盔兵/ window 100,2
+#115 "治疗效果降低"
+#120 "魔法防御提升"
+#120 "物理防御提升"
+
+
+# 1m  hard?
+# Wave 4 - 戈耳狄士兵 x2, 戈耳狄狙击手 x2, 爆破型7号哥布林战车 x1
+170 "Wave 4" sync /Added new combatant 爆破型7号哥布林战车/ window 170,2
+187 "炸弹 1" duration 15
+208 "炸弹 2" duration 15
+
+
+# 70s hard phase push
+# Wave 5 - 戈耳狄士兵 x2, 9号哥布林黑寡妇 x2
+240 "Wave 5" sync /Added new combatant 9号哥布林黑寡妇/ window 240,2
+254 "炸弹 1" duration 15
+#263 "爆炸加农炮"
+275 "炸弹 2" duration 15
+#291 "爆炸加农炮"
+
+
+# 2m hard? probably not time dependent. 104s slow. 74s fast.
+# Wave 6 - 戈耳狄硬盔兵 x1, 爆破型7号哥布林战车 x1, 狩猎人偶 x1
+310 "Wave 6" sync /Added new combatant 狩猎人偶/ window 310,2
+#319 "爆炸加农炮"
+322 "炸弹 1" duration 15
+324 "迅光" duration 3
+#325 "治疗效果降低"
+#330 "物理防御提升"
+343 "炸弹 2" duration 15
+347 "迅光" duration 3
+#347 "爆炸加农炮"
+370 "迅光" duration 3
+#375 "爆炸加农炮"
+393 "迅光" duration 3
+#403 "爆炸加农炮"
+416 "迅光" duration 3
+
+
+# 80s hard phase push
+# Wave 7 - 狩猎人偶 x4
+430 "Wave 7" sync /Added new combatant 狩猎人偶/ window 110,2
+443 "迅光" duration 3
+443 "炸弹 1" duration 15
+466 "迅光" duration 3
+468 "炸弹 2" duration 15
+489 "迅光" duration 3
+
+
+# wave probably not time dependent. 98s slow.
+# Wave 8 - 戈耳狄士兵 x1, 戈耳狄狙击手 x3, 戈耳狄铁心兵 x1, 戈耳狄硬盔兵 x1
+510 "Wave 8" sync /Added new combatant 戈耳狄狙击手/ window 70,2
+512 "迅光" duration 3
+524 "炸弹 1" duration 15
+#525 "治疗效果降低"
+#530 "物理防御提升"
+#530 "魔法防御提升"
+535 "迅光" duration 3
+549 "炸弹 2" duration 15
+558 "迅光" duration 3
+581 "迅光" duration 3
+604 "迅光" duration 3
+
+
+# Wave 9 - 戈耳狄士兵 x2, 戈耳狄狙击手 x2, 爆破型7号哥布林战车 x1, 9号哥布林黑寡妇 x2, 狩猎人偶 x1
+630 "Wave 9" sync /Added new combatant 9号哥布林黑寡妇/ window 110,2
+645 "迅光" duration 3
+#651 "爆炸加农炮"
+668 "迅光" duration 3
+#679 "爆炸加农炮"
+691 "迅光" duration 3
+#707 "爆炸加农炮"
+714 "迅光" duration 3
+#735 "爆炸加农炮"
+737 "迅光" duration 3
+760 "迅光" duration 3
+#763 "爆炸加农炮"
+783 "迅光" duration 3
+#791 "爆炸加农炮"
+806 "迅光" duration 3

@@ -1,0 +1,132 @@
+﻿# Created by Shasta Kota of Death & Taxes (DnT) on Gilgamesh
+# Shasta's reddit: /u/shastaxc
+
+#The reset line is not working. Timeline will need to be restarted manually every attempt
+0 "--战斗终了--" sync /Removing combatant 骑神托尔丹/ window 10000 jump 0
+
+#TTS调用设置
+define speaker "voice" 0 100
+
+alertall "龙眼之邪" before 4 speak "voice" "快背对！"
+alertall "百雷" before 4 speak "voice" "快分散！"
+alertall "邪龙魔炎" before 5 speak "voice" "集合分摊！"
+alertall "天踵" before 4 speak "voice" "T死刑"
+alertall "火焰锁" before 4 speak "voice" "点名拉开！"
+alertall "站塔！" before 4 speak "voice" "快站塔！"
+
+# 第1阶段 - Thordan
+0 "阿斯卡隆之威" sync /骑神托尔丹发动了“阿斯卡隆之威”/ window 10
+7 "流星雨" duration 3
+12 "阿斯卡隆之仁" duration 3
+19 "阿斯卡隆之威"
+23 "龙眼之光"
+33 "龙眼之邪"
+39 "阿斯卡隆之威"
+47 "百雷"
+55 "邪龙魔炎"
+60 "古代爆震"
+67 "阿斯卡隆之威"
+73 "天踵"
+74 "阿斯卡隆之威"
+
+
+120 "第2阶段" sync /Added new combatant 圣骑士沙里贝尔/ window 120 #Testing
+#120 Spawns 圣骑士沙里贝尔
+#122 Spawns 圣骑士埃尔姆诺斯特
+125 "火焰锁" duration 3 
+133 "站塔！"
+#133 Spawns 圣骑士泽菲兰
+136 "DPS爆发输出！" duration 20
+#152 spawns 圣骑士伊尼亚斯, 圣骑士波勒克兰, 圣骑士韦尔吉纳
+163 "俯冲！"
+#165 Spawns 圣骑士让勒努 and 圣骑士阿代尔斐尔
+180 "苍穹体势"
+189 "圣光剑舞"
+199 "点名 1"
+202 "点名 2"
+205 "点名 3"
+208 "苍穹体势"
+217 "至圣"
+223 "至圣"
+229 "圣光剑舞"
+236 "苍穹体势"
+243 "至圣"
+
+
+300 "第3阶段" sync /Added new combatant 圣骑士伊尼亚斯/ window 100,0
+#300 spawns 圣骑士伊尼亚斯, 圣骑士韦尔吉纳, 圣骑士波勒克兰
+#302 spawns 圣骑士格里诺
+#303 spawns 圣骑士奥默里克
+304 "连线！" duration 7 #AKA Spiral Pierce
+308 "严冬风暴" duration 3
+#310 Spawns 圣骑士努德内
+317 "击退" #AKA Faith Unmoving
+#320 Spawns 星屑圣纹 x8, 流星圣纹 x1
+327 "彗星" duration 5
+334 "彗星" duration 5
+370 "流星冲击"
+
+
+397 "第4阶段" sync /Removed combatant 流星圣纹/ window 500
+406 "击退" duration 7
+#408 Spawns 所有人
+425 "万物终结"
+435 "龙眼之光"
+445 "圆桌骑士" sync /召唤圆桌骑士/ window 200
+#448 Spawns 圣骑士阿代尔斐尔 & 圣骑士让勒努
+451 "阿斯卡隆之威"
+#454 Spawns 圣骑士泽菲兰
+457 "治疗被击晕" duration 11
+467 "冲刺"
+473 "龙眼之邪"
+487 "古代爆震"
+501 "圆桌骑士"
+#503 spawns 圣骑士盖里克 & 圣骑士埃尔姆诺斯特
+507 "站塔！" duration 5
+511 "沉重打击" duration 7
+512 "龙眼之邪"
+#512 Spawns 圣骑士格里诺
+
+523 "邪龙魔炎" duration 5
+526 "击退"
+534 "阿斯卡隆之威"
+542 "龙眼之光"
+552 "圆桌骑士"
+#555 spawns 圣骑士韦尔吉纳, 圣骑士伊尼亚斯, 圣骑士波勒克兰
+559 "百雷"
+561 "连线！" duration 7
+565 "点名" duration 5
+565 "邪龙魔炎" duration 5
+569 "俯冲！"
+
+581 "天踵"
+584 "阿斯卡隆之威"
+593 "龙眼之光"
+603 "圆桌骑士"
+#606 Spawns 圣骑士努德内
+#608 Spawns 圣骑士沙里贝尔
+611 "阿斯卡隆之威"
+613 "火焰锁" duration 3
+614 "龙眼之邪"
+616 "彗星" duration 5
+618 "阿斯卡隆之仁" duration 3
+620 "严冬风暴" duration 3
+630 "古代爆震"
+635 "天踵"
+642 "古代爆震"
+645 "龙眼之光"
+655 "圆桌骑士"
+#658 spawns 圣骑士让勒努 and 圣骑士阿代尔斐尔
+662 "阿斯卡隆之威"
+667 "至圣"
+#669 spawns 圣骑士伊尼亚斯, 圣骑士波勒克兰, 圣骑士韦尔吉纳
+676 "穿越苍穹"
+679 "穿越苍穹"
+682 "穿越苍穹"
+
+#685 Spawn 圣骑士泽菲兰
+689 "DPS爆发输出！" duration 25
+697 "纯粹灵魂"
+707 "绝对信仰"
+712 "邪龙目光"
+712 "龙眼之邪"

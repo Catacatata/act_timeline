@@ -1,0 +1,156 @@
+# Containment Bay S1T6 (Extreme) - Sophia
+# Created by Shasta Kota of Death & Taxes (DnT) on Gilgamesh
+# Shasta's reddit: /u/shastaxc
+# Last Updated: 10/6/2016
+# 汉化翻译 by 卡塔利亚
+
+#############################################################
+###定制你自己的时间轴，不去除每句前的#标签
+###他们就不会出现在你的时间轴上！
+
+###DPS能隐藏这些
+#隐藏所有 "如意宝珠"
+#隐藏所有 "睿智之秤"
+
+###治疗职业能隐藏这些
+
+
+###坦克能隐藏这些
+
+
+##############################################################
+################## Windows 8 & 10 音效 ##################
+#删去前方的#标签来选择声音
+#define speaker "voice" "Microsoft Huihui Desktop" 0 100
+#define speaker "voice" "Microsoft Hanhan Desktop" 0 100
+
+#################### Windows 7 音效 ####################
+#删去前方的#标签来选择声音
+#define speaker "voice" "Microsoft Lili" 0 100
+
+################ 定制语音播报 #####################
+########删去前方的#标签来选择语音播报内容
+#alertall "灵知" before 5 speak "voice" "头前击飞"
+#alertall "暴雷" before 3 speak "voice" "集合"
+#alertall "震雷" before 3 speak "voice" "正面AOE"
+#alertall "灼热视线" before 2 speak "voice" "背对"
+#alertall "魔枪乱舞" before 1 speak "voice" "龙骑身后"
+#alertall "类星体 (诱导)" before 12 speak "voice" "诱导类星体"
+#alertall "倾斜" before 3 speak "voice" "移动到边缘"
+#alertall "不平衡神罚" before 6 speak "voice" "按宏站好"
+#alertall "女儿刷新" before 0 speak "voice" "haha haha haha"
+
+#alertall "如意宝珠" before 4 speak "voice" "AoE"
+#alertall "睿智之秤" before 4 speak "voice" "T死刑"
+
+##############################################################
+0 "--重置--" sync /Removing combatant 索菲娅/ window 10000 jump 0
+
+################# Phase 1
+0	"--开始--" sync /索菲娅正在发动“震雷”/ window 10
+12	"灵知" #击退
+24	"女儿出现" sync /Added new combatant 移涌/ window 35
+30	"连线出现" sync /移涌正在发动“复制”/ window 30
+29	"闪雷"
+35	"暴风"
+38	"复制"
+45	"处决"
+55	"阴云天堂"
+59	"小怪刷新" sync /Added new combatant 信徒其二/ window 70,0
+70	"灼热视线" #Look Away
+85	"魔枪乱舞" #Behind dragoon
+104	"猛突进"
+
+################# Phase 2
+200	"睿智之天平" sync /索菲娅发动了“睿智之天平”/ window 200,0
+211	"多根连线" #This set is always balanced
+220	"类星体 (诱导)" #before 10 stack
+223	"暴风"
+226	"多根连线"
+238	"倾斜"
+
+################# Phase 3; Phase change at 76%
+300	"震雷" sync /索菲娅发动了“震雷”/ window 100,0
+303	"多根连线"
+313	"突袭" sync /索菲娅发动了“突袭”/ window 313,0 #half arena dash + vulnerability
+314	"倾斜"
+333	"不平衡神罚" #before 6 stack partner
+334	"如意宝珠" #AoE
+336	"如意宝珠" #AoE
+343	"睿智之秤" #Tank Buster
+	
+################# Phase 4; Phase change at 67%
+500	"女儿出现" sync /Added new combatant 移涌/ window 200,0
+504	"如意宝珠" #AoE
+506	"如意宝珠" #AoE
+508	"如意宝珠" #AoE
+510	"连线出现"
+513	"闪雷"
+518	"暴风"
+521	"复制"
+528	"睿智之秤" #Tank Buster
+539	"处决"
+
+
+################# Phase 5; loops until end
+551	"如意宝珠" #AoE
+553	"如意宝珠" #AoE
+555	"如意宝珠" #AoE
+562	"睿智之秤" #Tank Buster
+564	"多根连线"
+576	"倾斜"
+589	"暴雷"
+598	"睿智之秤" #Tank Buster
+602	"多根连线"
+612	"倾斜"
+614	"突袭"
+626	"如意宝珠" #AoE
+628	"如意宝珠" #AoE
+630	"如意宝珠" #AoE
+637	"睿智之秤" #Tank Buster
+643	"震雷"
+653	"不平衡神罚" #before 6 stack partner
+658	"灵知" #knockback
+670	"睿智之秤"
+681	"多根连线"
+685	"不平衡神罚" #before 6 stack partner
+692	"倾斜"
+696	"女儿出现"
+700	"如意宝珠" #AoE
+702	"如意宝珠" #AoE
+704	"如意宝珠" #AoE
+710	"睿智之秤" #Tank Buster
+714	"连线出现"
+716	"闪雷"
+719	"复制"
+720	"连线出现"
+722	"暴风"
+725	"复制"
+735	"类星体 (诱导)" #before 10 stack
+742	"睿智之秤"
+753	"不平衡神罚" #before 6 stack partner
+756	"处决"
+
+#Repeat loop of phase 5
+768	"如意宝珠" #AoE
+770	"如意宝珠" #AoE
+772	"如意宝珠" #AoE
+779	"睿智之秤" #Tank Buster
+781	"多根连线"
+792	"倾斜"
+806	"暴雷"
+815	"睿智之秤"
+817	"多根连线"
+829	"倾斜"
+831	"突袭" #half arena dash + vulnerability
+844	"如意宝珠" #AoE
+846	"如意宝珠" #AoE
+848	"如意宝珠" #AoE
+854	"睿智之秤" #Tank Buster
+860	"震雷"
+871	"不平衡神罚" #before 6 stack partner
+876	"灵知" #knockback, stack SE
+888	"睿智之秤"
+899	"多根连线"
+903	"不平衡神罚"
+910	"倾斜"

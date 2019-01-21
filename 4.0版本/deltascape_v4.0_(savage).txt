@@ -1,0 +1,299 @@
+# Deltascape V4.0 (Savage) - Exdeath/Neo Exdeath
+
+# Add the following to ACT config:
+# <Trigger R="14:23FB:Exdeath" SD="Fire 3" ST="3" CR="F" C="O4S" T="F" TN="" Ta="F" />
+# <Trigger R="14:23FC:Exdeath" SD="Blizzard 3" ST="3" CR="F" C="O4S" T="F" TN="" Ta="F" />
+# <Trigger R="14:23FD:Exdeath" SD="Thunder 3" ST="3" CR="F" C="O4S" T="F" TN="" Ta="F" />
+#
+# <Trigger R="14:2410:Neo Exdeath" SD="Go In" ST="3" CR="F" C="O4S" T="F" TN="" Ta="F" />
+# <Trigger R="14:244C:Neo Exdeath" SD="Go Out" ST="3" CR="F" C="O4S" T="F" TN="" Ta="F" />
+# <Trigger R="14:244D:Neo Exdeath" SD="Charge" ST="3" CR="F" C="O4S" T="F" TN="" Ta="F" />
+#
+# <Trigger R="You suffer the effect of Allagan Field" SD="Allagan Field" ST="3" CR="F" C="O4S" T="F" TN="" Ta="F" />
+# <Trigger R="You suffer the effect of Beyond Death" SD="Beyond Death" ST="3" CR="F" C="O4S" T="F" TN="" Ta="F" />
+#
+# Optional:
+# <Trigger R="14:2414:Neo Exdeath" SD="Opposite Colors" ST="3" CR="F" C="O4S" T="F" TN="" Ta="F" />
+#
+# Triggernometry:
+# https://pastebin.com/as6R03ds
+
+alertall "Dualcast (Blizzard)" before 1 sound "tts Dualcast Blizzard"
+alertall "Dualcast (Thunder)" before 1 sound "tts Dualcast Thunder"
+alertall "Dualcast (Fire)" before 1 sound "tts Dualcast Fire"
+alertall "White Hole" before 0 sound "tts White Hole"
+alertall "Black Hole" before 1 sound "tts Black Hole"
+alertall "Meteor" before 2 sound "tts Meteor"
+alertall "Vacuum Wave" before 2 sound "tts Vacuum Wave"
+alertall "The Decisive Battle" before 1 sound "tts The Decisive Battle"
+alertall "--Stack Marker--" before 0 sound "tts Stack"
+
+alertall "Almagest" before 2 sound "tts Almagest"
+alertall "Delta Attack" before 2 sound "tts Delta Attack"
+alertall "Double Attack" before 2 sound "tts Double Attack"
+alertall "Grand Cross Alpha" before 2 sound "tts Go Center, Grand Cross Alpha"
+alertall "Grand Cross Delta" before 2 sound "tts Grand Cross Delta"
+alertall "Grand Cross Omega" before 2 sound "tts Go Center, Grand Cross Omega"
+alertall "The Final Battle" before 4 sound "tts Debuffs"
+alertall "Almagest (Enrage)" before 0 sound "tts Enrage"
+
+alertall "--Move--" before 0 sound "tts Move"
+alertall "--Jump--" before 2 sound "tts Jump"
+alertall "--Stack for Delta Attack--" before 2 sound "tts Stack for Delta Attack"
+alertall "--Shriek to Center Look Away--" before 0 sound "tts Shriek to Center, Look Away"
+alertall "--Aero III--" before 2 sound "tts Aero 3"
+alertall "--Aero then Grand Cross Delta--" before 2 sound "tts Aero then Grand Cross Delta"
+alertall "--Aero then Earth Shaker--" before 4 sound "tts Aero then Earth Shaker"
+alertall "--Emptiness then Beam--" before 4 sound "tts Emptiness then Beam"
+alertall "--Emptiness then Light and Darkness--" before 4 sound "tts Emptiness then Light and Darkness"
+alertall "--Emptiness then Grand Cross Alpha--" before 4 sound "tts Emptiness then Grand Cross Alpha"
+alertall "--Charybdis then Double Attack--" before 4 sound "tts Charybdis then Double Attack"
+alertall "--Charybdis then Soft Enrage--" before 4 sound "tts Charybdis then Soft Enrage"
+
+hideall "--Move--"
+hideall "--Stack for Delta Attack--"
+hideall "--Aero III--"
+hideall "--Aero then Grand Cross Delta--"
+hideall "--Aero then Earth Shaker--"
+hideall "--Emptiness then Beam--"
+hideall "--Emptiness then Light and Darkness--"
+hideall "--Emptiness then Grand Cross Alpha--"
+hideall "--Charybdis then Double Attack--"
+hideall "--Charybdis then Soft Enrage--"
+
+0 "--Stop--" sync /Removing combatant Exdeath|Removing combatant Neo Exdeath/ window 10000 jump 0
+
+#Phase 1 - 
+1 "--Start--" sync /You shall all be given to the void/ window 10000
+10 "Dualcast (Blizzard)" duration 2 sync /Exdeath readies Dualcast/ window 2, 2
+15 "Blizzard III" duration 2
+
+23 "Dualcast (Thunder)" duration 2 sync /Exdeath readies Dualcast/ window 2, 2
+27 "Thunder III" duration 4
+
+36 "Dualcast (Fire)" duration 2 sync /Exdeath readies Dualcast/ window 2, 2
+40 "Fire III" duration 2
+
+#Phase 2 -
+47 "--Phase 2--" sync /I shall send you to your doom/ window 10000
+47 "White Hole" duration 7 sync /Exdeath readies White Hole/ window 10
+
+61 "The Decisive Battle" duration 4 sync /Exdeath readies The Decisive Battle/ window 10
+61 "Deathly Vine x7 (Add)"
+70 "--Stack Marker--"
+70 "Holy" duration 4 sync /Exdeath begins casting Holy/ window 10
+73 "Collision" sync /Exdeath uses Collision/ window 2, 2
+
+78 "--Get Away Marker x3--"
+78 "Flare x3" duration 5
+79 "Zombie Breath" sync /Exdeath uses Zombie Breath/ window 2, 2
+
+87 "Fire/Blizzard/Thunder III" duration 3
+92 "Vacuum Wave" duration 4 sync /Exdeath readies Vacuum Wave/ window 2, 2
+
+99 "White Hole" duration 7 sync /Exdeath readies White Hole/ window 10
+116 "Black Hole" duration 3 sync /Exdeath readies Black Hole/ window 10
+120 "Black Hole x8 (Add)"
+
+122 "Dualcast (Fire)" duration 2 sync /Exdeath readies Dualcast/ window 2, 2
+126 "Fire III" duration 2
+
+131 "--Stack Marker--"
+131 "Holy" duration 4 sync /Exdeath begins casting Holy/ window 2, 2
+
+138 "White Hole" duration 7 sync /Exdeath readies White Hole/ window 10
+152 "Dualcast (Thunder)" duration 2 sync /Exdeath readies Dualcast/ window 2, 2
+156 "Thunder III" duration 4
+162 "Meteor" duration 5 sync /Exdeath begins casting Meteor/ window 10
+
+177 "The Decisive Battle" duration 4 sync /Exdeath readies The Decisive Battle/ window 10
+177 "Deathly Vine x7 (Add)"
+185 "--Stack Marker--"
+185 "Holy" duration 4 sync /Exdeath begins casting Holy/ window 10
+188 "Collision" sync /Exdeath uses Collision/ window 2, 2
+
+193 "--Get Away Marker x3--"
+193 "Flare x3" duration 5
+194 "Zombie Breath" sync /Exdeath uses Zombie Breath/ window 2, 2
+
+202 "Fire/Blizzard/Thunder III" duration 3
+207 "Vacuum Wave" duration 4 sync /Exdeath readies Vacuum Wave/ window 2, 2
+
+214 "White Hole" duration 7 sync /Exdeath readies White Hole/ window 10
+231 "Black Hole" duration 3 sync /Exdeath readies Black Hole/ window 10
+235 "Black Hole x8 (Add)"
+
+237 "Dualcast (Blizzard)" duration 2 sync /Exdeath readies Dualcast/ window 2, 2
+241 "Blizzard III" duration 2
+
+246 "--Get Away Marker x3--"
+246 "Flare x3" duration 5
+253 "White Hole" duration 7 sync /Exdeath readies White Hole/ window 10
+
+267 "Dualcast (Thunder)" duration 2 sync /Exdeath readies Dualcast/ window 2, 2
+271 "Thunder III" duration 3
+277 "Meteor" duration 5 sync /Exdeath begins casting Meteor/ window 10
+
+400 "--Neo Exdeath--" sync /Nothingness is my weapon/ window 10000 jump 0
+
+#Phase 1
+1000 "--Phase 1--"
+1000 "Almagest" duration 6 sync /Neo Exdeath readies Almagest/ window 1001, 0
+1011 "--Aero III--"
+1011 "Aero III" duration 4 sync /Neo Exdeath begins casting Aero III/ window 10
+1020 "Delta Attack" duration 5 sync /Neo Exdeath begins casting Delta Attack/ window 10
+1023 "--Move--"
+
+1036 "Grand Cross Alpha" duration 5 sync /Neo Exdeath readies Grand Cross Alpha/ window 10
+1047 "Flood of Naught (Terminal)" duration 5 sync /Neo Exdeath readies Flood of Naught/ window 10
+1055 "Flood of Naught (White/Black)" duration 5 sync /Neo Exdeath readies Flood of Naught/ window 10
+
+1067 "Double Attack" duration 5 sync /Neo Exdeath readies Double Attack/ window 10
+1080 "--Emptiness then Beam--"
+1080 "Emptiness" duration 2
+1085 "Flood of Naught (Inner/Outer)" duration 5 sync /Neo Exdeath readies Flood of Naught/ window 10
+1096 "--Aero then Grand Cross Delta--"
+1096 "Aero III" duration 4 sync /Neo Exdeath begins casting Aero III/ window 10
+
+#Phase 2
+1109 "--Phase 2--"
+1109 "Grand Cross Delta" duration 5 sync /Neo Exdeath readies Grand Cross Delta/ window 10
+1122 "Flood of Naught (Random)" duration 5 sync /Neo Exdeath readies Flood of Naught/ window 10
+1122 "--Death Shriek x2--"
+1124 "--Death Bolt x2--"
+1124 "--Death Wave--"
+1130 "Almagest" duration 6 sync /Neo Exdeath readies Almagest/ window 10, 10
+
+1143 "--Aero then Earth Shaker--"
+1143 "Aero III" duration 4 sync /Neo Exdeath begins casting Aero III/ window 10
+1153 "Earth Shaker" duration 4 sync /Neo Exdeath readies Earth Shaker/ window 10
+1160 "Vacuum Wave" duration 3 sync /Neo Exdeath readies Vacuum Wave/ window 2, 2
+
+1174 "--Emptiness then Light and Darkness--"
+1174 "Emptiness" duration 2
+1181 "Light and Darkness" duration 4 sync /Neo Exdeath begins casting Light and Darkness/ window 10
+1186 "--Flare x3--" duration 5
+1186 "--Holy--" duration 5
+1191 "Flood of Naught (Inner/Outer)" duration 5 sync /Neo Exdeath readies Flood of Naught/ window 10
+
+#Phase 3
+1206 "--Phase 3--"
+1206 "Meteor" duration 4 sync /Neo Exdeath begins casting Meteor/ window 10
+1212 "Arcane Sphere x4 (Add)"
+1216 "--Jump--"
+1219 "Flood of Naught (White/Black)" duration 5 sync /Neo Exdeath readies Flood of Naught/ window 10
+
+1232 "--Charybdis then Double Attack--"
+1232 "Charybdis" duration 5 sync /Neo Exdeath readies Charybdis/ window 20, 10
+1240 "Double Attack" duration 5 sync /Neo Exdeath readies Double Attack/ window 10
+1255 "Almagest" duration 6 sync /Neo Exdeath readies Almagest/ window 10, 10
+
+1264 "Vacuum Wave" duration 3 sync /Neo Exdeath readies Vacuum Wave/ window 2, 2
+1269 "--Aero III--"
+1269 "Aero III" duration 4 sync /Neo Exdeath begins casting Aero III/ window 10
+
+1277 "--Emptiness then Grand Cross Alpha--"
+1277 "Emptiness" duration 2
+1283 "Grand Cross Alpha" duration 5 sync /Neo Exdeath readies Grand Cross Alpha/ window 10
+1294 "Flood of Naught (Terminal)" duration 5 sync /Neo Exdeath readies Flood of Naught/ window 10
+1302 "Flood of Naught (White/Black)" duration 5 sync /Neo Exdeath readies Flood of Naught/ window 10
+
+1309 "--Stack for Delta Attack--"
+1319 "Delta Attack" duration 5 sync /Neo Exdeath begins casting Delta Attack/ window 10
+1322 "--Move--"
+1328 "Flood of Naught (Inner/Outer)" duration 5 sync /Neo Exdeath readies Flood of Naught/ window 10
+
+#Phase 4
+1337 "--Phase 4--"
+1337 "Grand Cross Omega" duration 5 sync /Neo Exdeath readies Grand Cross Omega/ window 10
+1345 "The Final Battle" duration 3 sync /Neo Exdeath readies The Final Battle/ window 2, 2
+
+1349 "--Jump--"
+1352 "Flood of Naught (Random)" duration 5 sync /Neo Exdeath readies Flood of Naught/ window 2, 2
+1355 "--Death Wave--"
+1355 "--Death Bolt x3--"
+1357 "Flood of Naught (Random)" duration 5 sync /Neo Exdeath readies Flood of Naught/ window 2, 2
+1363 "Flood of Naught (Random)" duration 5 sync /Neo Exdeath readies Flood of Naught/ window 2, 2
+1369 "--Shriek to Center Look Away--"
+1374 "--Death Shriek x2--"
+1377 "Flood of Naught (Terminal)" duration 5 sync /Neo Exdeath readies Flood of Naught/ window 2, 2
+
+1386 "Almagest" duration 6 sync /Neo Exdeath readies Almagest/ window 10, 10
+1397 "--Emptiness then Beam--"
+1397 "Emptiness" duration 2
+1402 "Flood of Naught (Inner/Outer)" duration 5 sync /Neo Exdeath readies Flood of Naught/ window 10
+1413 "--Aero then Grand Cross Delta--"
+1413 "Aero III" duration 4 sync /Neo Exdeath begins casting Aero III/ window 10
+
+#Phase 5 (Repeat of Phase 2)
+1426 "--Phase 5--"
+1426 "Grand Cross Delta" duration 5 sync /Neo Exdeath readies Grand Cross Delta/ window 10
+1439 "Flood of Naught (Random)" duration 5 sync /Neo Exdeath readies Flood of Naught/ window 10
+1439 "--Death Shriek x2--"
+1441 "--Death Bolt x2--"
+1441 "--Death Wave--"
+1448 "Almagest" duration 6 sync /Neo Exdeath readies Almagest/ window 10, 10
+
+1461 "--Aero then Earth Shaker--"
+1461 "Aero III" duration 4 sync /Neo Exdeath begins casting Aero III/ window 10
+1470 "Earth Shaker" duration 4 sync /Neo Exdeath readies Earth Shaker/ window 10
+1477 "Vacuum Wave" duration 3 sync /Neo Exdeath readies Vacuum Wave/ window 2, 2
+
+1493 "--Emptiness then Light and Darkness--"
+1493 "Emptiness" duration 2
+1499 "Light and Darkness" duration 4 sync /Neo Exdeath begins casting Light and Darkness/ window 10
+1504 "--Flare x3--" duration 5
+1504 "--Holy--" duration 5
+1509 "Flood of Naught (Inner/Outer)" duration 5 sync /Neo Exdeath readies Flood of Naught/ window 10
+
+#Phase 6 (Repeat of Phase 3)
+1523 "--Phase 6--"
+1523 "Meteor" duration 4 sync /Neo Exdeath begins casting Meteor/ window 10
+1529 "Arcane Sphere x4 (Add)"
+1534 "--Jump--"
+1537 "Flood of Naught (White/Black)" duration 5 sync /Neo Exdeath readies Flood of Naught/ window 10
+
+1550 "--Charybdis then Double Attack--"
+1550 "Charybdis" duration 5 sync /Neo Exdeath readies Charybdis/ window 20, 10
+1558 "Double Attack" duration 5 sync /Neo Exdeath readies Double Attack/ window 10
+1572 "Almagest" duration 6 sync /Neo Exdeath readies Almagest/ window 10, 10
+
+1582 "Vacuum Wave" duration 3 sync /Neo Exdeath readies Vacuum Wave/ window 2, 2
+1587 "--Aero III--"
+1587 "Aero III" duration 4 sync /Neo Exdeath begins casting Aero III/ window 10
+
+1594 "--Emptiness then Grand Cross Alpha--"
+1594 "Emptiness" duration 2
+1600 "Grand Cross Alpha" duration 5 sync /Neo Exdeath readies Grand Cross Alpha/ window 10
+1611 "Flood of Naught (Terminal)" duration 5 sync /Neo Exdeath readies Flood of Naught/ window 2, 2
+1619 "Flood of Naught (White/Black)" duration 5 sync /Neo Exdeath readies Flood of Naught/ window 2, 2
+
+1626 "--Stack for Delta Attack--"
+1636 "Delta Attack" duration 5 sync /Neo Exdeath begins casting Delta Attack/ window 10
+1639 "--Move--"
+1644 "Flood of Naught (Inner/Outer)" duration 5 sync /Neo Exdeath readies Flood of Naught/ window 10
+
+#Phase 7
+1653 "--Phase 5--"
+1653 "Neverwhere" duration 5 sync /Neo Exdeath readies Neverwhere/ window 10
+1661 "--Charybdis then Soft Enrage--"
+1661 "Charybdis" duration 5 sync /Neo Exdeath readies Charybdis/ window 10
+
+1670 "Frenzied Fist x9"
+1677 "Frenzied Sphere (1)" sync /Neo Exdeath uses Frenzied Sphere/ window 10
+1680 "Frenzied Fist x9"
+1687 "Frenzied Sphere (2)" sync /Neo Exdeath uses Frenzied Sphere/ window 10
+1690 "Frenzied Fist x9"
+1697 "Frenzied Sphere (3)" sync /Neo Exdeath uses Frenzied Sphere/ window 10
+1700 "Frenzied Fist x9"
+1707 "Frenzied Sphere (4)" sync /Neo Exdeath uses Frenzied Sphere/ window 10
+1710 "Frenzied Fist x9"
+1717 "Frenzied Sphere (5)" sync /Neo Exdeath uses Frenzied Sphere/ window 10
+1720 "Frenzied Fist x9"
+1727 "Frenzied Sphere (6)" sync /Neo Exdeath uses Frenzied Sphere/ window 10
+1730 "Frenzied Fist x9"
+1737 "Frenzied Sphere (7)" sync /Neo Exdeath uses Frenzied Sphere/ window 10
+1740 "Frenzied Fist x9"
+1747 "Frenzied Sphere (8)" sync /Neo Exdeath uses Frenzied Sphere/ window 10
+
+1752 "Almagest (Enrage)" duration 10 sync /Neo Exdeath readies Almagest/ window 100

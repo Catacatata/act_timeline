@@ -1,0 +1,216 @@
+# The Pool of Tribute (Extreme) - Susano
+
+# Add the following to ACT config:
+# <Trigger R="1B:[0-9A-F]{8}:<Your Character>:[0-9A-F]{4}:[0-9A-F]{4}:004B:[0-9A-F]{4}:[0-9A-F]{4}:[0-9A-F]{4}:" SD="Dice on you" ST="3" CR="F" C="Susano EX" T="F" TN="" Ta="F" />
+# <Trigger R="1B:[0-9A-F]{8}:(?&lt;char&gt;[a-zA-Z']*) [a-zA-Z']{1,}:[0-9A-F]{4}:[0-9A-F]{4}:006E:[0-9A-F]{4}:[0-9A-F]{4}:[0-9A-F]{4}:" SD="on ${char}" ST="3" CR="F" C="Susano EX" T="F" TN="" Ta="F" />
+
+alertall "Assail" before 3 sound "tts Tank Buster"
+alertall "Stormsplitter" before 0 sound "tts Tank Buster"
+alertall "Ukehi" before 2 sound "tts AOEs"
+
+alertall "--Dice--" before 0 sound "tts Dice"
+alertall "--Dice/AOE--" before 0 sound "tts Dice AOE combo"
+alertall "--Purple Marks--" before 2 sound "tts Purple Marks"
+alertall "--Thundercloud--" before 2 sound "tts Thundercloud"
+alertall "--Purple Marks/Thundercloud--" before 2 sound "tts Purple Marks Thundercloud combo"
+alertall "--Jump Robe--" before 2 sound "tts Jump Robe"
+alertall "--Dice/Stack--" before 0 sound "tts Dice Knockback Stack combo"
+alertall "--Dice/AOE x2--" before 2 sound "tts Dice Double AOE combo"
+alertall "--Purple Mark/Thundercloud/AOE x2--" before 2 sound "tts Purple Mark Thundercloud AOE combo"
+
+hideall "--Dice--"
+hideall "--Dice/AOE--"
+hideall "--Purple Marks--"
+hideall "--Thundercloud--"
+hideall "--Purple Marks/Thundercloud--"
+hideall "--Jump Robe--"
+hideall "--Dice/Stack--"
+hideall "--Dice/AOE x2--"
+hideall "--Jump Robe/Thundercloud/AOE x2--"
+
+# Notes:
+# Assail - Mini tank buster
+# Stormsplitter - Tank Buster with slashing debuff
+# Churn - Applies Dice debuff
+# Yata No Kagami - Knocks back player with red mark
+# Seasplitter - AOE with Narrow Line safe zone
+# Brightstorm - Stack Damage
+# Rasen Kaikyo - Ground AOE on players
+# Yasakani No Magatama - Summons Thunderhead
+# The Parting Clouds - Purple Line AOE
+# Levinbolt - Hits player with purple mark
+# Ukehi - Raid wide multi hit AOE
+# Sheer Force - Raid wide AOE
+# The Sealed Gate - Rock damage
+# Ame-No-Murakumo - Ultimate
+
+
+0 "--Stop--" sync /Removing combatant Susano/ window 10000 jump 0
+
+#Phase 1 - 
+1 "--Start--" sync /Let the revels begin/ window 10000
+10 "Assail" sync /Susano uses Assail/ window 2, 2
+
+13 "--Dice--"
+13 "Churn" sync /Susano uses Churn/ window 2, 2
+20 "--Dice Mark x4--"
+
+32 "--Red Mark--"
+37 "Yata No Kagami" sync /Susano uses Yata No Kagami/ window 2, 2
+38 "Seasplitter" duration 5 sync /Susano readies Seasplitter/ window 2, 2
+49 "Assail" sync /Susano uses Assail/ window 2, 2
+
+52 "--Dice/AOE--"
+52 "Churn" sync /Susano uses Churn/ window 2, 2
+56 "Rasen Kaikyo" duration 3 sync /Susano readies Rasen Kaikyo/ window 2, 2
+58 "--Dice Mark x4--"
+
+70 "--Thundercloud--"
+70 "Thunderhead (Add)"
+72 "--Red Mark--"
+78 "Yata No Kagami" sync /Susano uses Yata No Kagami/ window 2, 2
+79 "The Parting Clouds" duration 2 sync /The thunderhead readies The Parting Clouds/ window 2, 2
+79 "Seasplitter" duration 5 sync /Susano readies Seasplitter/ window 2, 2
+89 "Assail" sync /Susano uses Assail/ window 2, 2
+
+#Phase 2 -
+94 "--Phase 2--" sync /How our hearts sing in the chaos/ window 10000
+118 "Ame-No-Murakumo (Add)" sync /Added new combatant Ame-No-Murakumo/ window 10
+118 "Dark Levin (Add)"
+121 "Dark Levin (Add)"
+124 "Dark Levin (Add)"
+127 "Dark Levin (Add)"
+
+200 "Ame-No-Murakumo (Add)" sync /Added new combatant Ame-No-Murakumo/ window 80, 0
+200 "Dark Levin (Add)"
+203 "Dark Levin (Add)"
+206 "Dark Levin (Add)"
+209 "Dark Levin (Add)"
+
+#Phase 3 -
+300 "--Phase 3--" sync /REJOICE/ window 10000
+304 "Ame No Murakumo"
+
+321 "Stormsplitter" duration 4 sync /Susano readies Stormsplitter/ window 10
+
+328 "--Purple Marks--"
+328 "--Purple Mark--"
+333 "Levinbolt" sync /Susano uses Levinbolt/ window 2, 2
+334 "--Purple Mark--"
+338 "Levinbolt" sync /Susano uses Levinbolt/ window 2, 2
+339 "--Purple Mark--"
+344 "Levinbolt" sync /Susano uses Levinbolt/ window 2, 2
+345 "--Purple Mark--"
+349 "Levinbolt" sync /Susano uses Levinbolt/ window 2, 2
+
+355 "Ukehi" duration 3 sync /Susano readies Ukehi/ window 10
+359 "Ukehi (1)"
+361 "Ukehi (2)"
+
+367 "--Thundercloud--"
+367 "Thunderhead (Add)"
+369 "--Red Mark--"
+375 "Yata No Kagami" sync /Susano uses Yata No Kagami/ window 2, 2
+375 "Seasplitter" duration 5 sync /Susano readies Seasplitter/ window 2, 2
+375 "The Parting Clouds" duration 2 sync /The thunderhead readies The Parting Clouds/ window 2, 2
+
+385 "Stormsplitter" duration 4 sync /Susano readies Stormsplitter/ window 2, 2
+
+392 "--Purple Marks/Thundercloud--"
+392 "--Purple Mark--"
+395 "Thunderhead (Add)"
+397 "Levinbolt" sync /Susano uses Levinbolt/ window 2, 2
+398 "--Purple Mark--"
+403 "The Parting Clouds" duration 2 sync /The thunderhead readies The Parting Clouds/ window 2, 2
+403 "Levinbolt" sync /Susano uses Levinbolt/ window 2, 2
+403 "--Purple Mark--"
+408 "Levinbolt" sync /Susano uses Levinbolt/ window 2, 2
+409 "--Purple Mark--"
+414 "Levinbolt" sync /Susano uses Levinbolt/ window 2, 2
+
+416 "Ukehi" duration 3 sync /Susano readies Ukehi/ window 2, 2
+421 "Ukehi (1)"
+423 "Ukehi (2)"
+425 "Ukehi (3)"
+
+431 "The Hidden Gate" sync /Susano uses The Hidden Gate/ window 2, 2
+432 "Ama-No-Iwato x4 (Add)"
+441 "The Sealed Gate" duration 15
+443 "Rasen Kaikyo" duration 2 sync /Susano readies Rasen Kaikyo/ window 2, 2
+448 "Stormsplitter" duration 4 sync /Susano readies Stormsplitter/ window 2, 2
+
+459 "--Jump Robe--"
+459 "--Purple Mark (Stun)--"
+465 "Levinbolt" sync /Susano uses Levinbolt/ window 2, 2
+466 "--Purple Mark (Stun)--"
+472 "Levinbolt" sync /Susano uses Levinbolt/ window 2, 2
+472 "--Purple Mark (Stun)--"
+478 "Levinbolt" sync /Susano uses Levinbolt/ window 2, 2
+479 "--Purple Mark (Stun)--"
+485 "Levinbolt" sync /Susano uses Levinbolt/ window 2, 2
+
+487 "Ukehi" duration 3 sync /Susano readies Ukehi/ window 2, 2
+491 "Ukehi (1)"
+493 "Ukehi (2)"
+495 "Ukehi (3)"
+
+502 "--Dice/Stack--"
+502 "Churn" sync /Susano uses Churn/ window 2, 2
+504 "--Red Mark--"
+509 "--Dice Mark x4--"
+510 "Yata No Kagami" sync /Susano uses Yata No Kagami/ window 2, 2
+510 "Seasplitter" duration 5 sync /Susano readies Seasplitter/ window 2, 2
+
+517 "Rasen Kaikyo" duration 2 sync /Susano readies Rasen Kaikyo/ window 2, 2
+525 "Stormsplitter" duration 4 sync /Susano readies Stormsplitter/ window 2, 2
+
+535 "--Jump Robe--"
+535 "--Purple Mark (Stun)--"
+541 "Levinbolt" sync /Susano uses Levinbolt/ window 2, 2
+541 "--Purple Mark (Stun)--"
+547 "Levinbolt" sync /Susano uses Levinbolt/ window 2, 2
+548 "--Purple Mark (Stun)--"
+554 "Levinbolt" sync /Susano uses Levinbolt/ window 2, 2
+554 "--Purple Mark (Stun)--"
+560 "Levinbolt" sync /Susano uses Levinbolt/ window 2, 2
+
+563 "Ukehi" duration 3 sync /Susano readies Ukehi/ window 2, 2
+568 "Ukehi (1)"
+570 "Ukehi (2)"
+572 "Ukehi (3)"
+
+574 "--Dice/AOE x2--"
+574 "Churn" sync /Susano uses Churn/ window 2, 2
+578 "Rasen Kaikyo" duration 2 sync /Susano readies Rasen Kaikyo/ window 2, 2
+581 "--Dice Mark x4--"
+583 "Rasen Kaikyo" duration 2 sync /Susano readies Rasen Kaikyo/ window 2, 2
+
+593 "Stormsplitter" duration 4 sync /Susano readies Stormsplitter/ window 2, 2
+
+601 "--Purple Mark/Thundercloud/AOE x2--"
+601 "--Purple Mark--"
+604 "Thunderhead (Add)"
+605 "Levinbolt" sync /Susano uses Levinbolt/ window 2, 2
+606 "--Purple Mark--"
+607 "Rasen Kaikyo" duration 2 sync /Susano readies Rasen Kaikyo/ window 2, 2
+611 "Levinbolt" sync /Susano uses Levinbolt/ window 2, 2
+611 "The Parting Clouds" duration 2 sync /The thunderhead readies The Parting Clouds/ window 2, 2
+612 "--Purple Mark--"
+616 "Levinbolt" sync /Susano uses Levinbolt/ window 2, 2
+617 "Rasen Kaikyo" duration 2 sync /Susano readies Rasen Kaikyo/ window 2, 2
+617 "--Purple Mark--"
+622 "Levinbolt" sync /Susano uses Levinbolt/ window 2, 2
+
+627 "--Red Mark--"
+632 "Yata No Kagami" sync /Susano uses Yata No Kagami/ window 2, 2
+633 "The Parting Clouds" duration 2 sync /The thunderhead readies The Parting Clouds/ window 2, 2
+633 "Seasplitter" duration 5 sync /Susano readies Seasplitter/ window 2, 2
+
+641 "Ukehi" duration 3 sync /Susano readies Ukehi/ window 2, 2
+645 "Ukehi (1)"
+647 "Ukehi (2)"
+649 "Ukehi (3)"
+
+656 "The Hidden Gate" sync /Susano uses The Hidden Gate/ window 100 jump 431
+658 "Ama-No-Iwato x4 (Add)"
+666 "The Sealed Gate" duration 15

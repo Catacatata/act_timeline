@@ -1,0 +1,185 @@
+# Alexander - The Soul of the Creator (Savage) - A12S / C4S
+# Created by Shasta Kota of Death & Taxes (DnT) on Gilgamesh
+# Shasta's reddit: /u/shastaxc
+# Last Updated: 10/8/2016
+# 汉化翻译 by 卡塔利亚
+
+###定制你自己的时间轴，在不想要的提示前加上#标签
+###他们就不会出现在你的时间轴上！
+
+#隐藏所有 "--重置--"
+###DPS能隐藏这些
+#隐藏所有 "顺劈"
+#隐藏所有 "T死刑"
+#隐藏所有 "小重力"
+
+###治疗职业能隐藏这些
+
+
+###坦克能隐藏这些
+
+
+##############################################################
+################## Windows 8 & 10 音效 ##################
+#删去前方的#标签来选择声音
+#define speaker "voice" "Microsoft Huihui Desktop" 0 100
+#define speaker "voice" "Microsoft Hanhan Desktop" 0 100
+
+#################### Windows 7 音效 ####################
+#删去前方的#标签来选择声音
+#define speaker "voice" "Microsoft Lili" 0 100
+
+################ 定制语音播报 #####################
+########删去前方的#标签来选择语音播报内容
+#alertall "重力异常" before 3 speak "voice" "debuff"
+#alertall "T死刑" before 3 speak "voice" "T死刑"
+#alertall "惩戒射线" before 5 speak "voice" "debuff"
+#alertall "连线" before 2 speak "voice" "连线"
+#alertall "神圣爆发" before 5 speak "voice" "AoE"
+#alertall "射线" before 5 speak "voice" "射线"
+#alertall "圣光之鞭" before 5 speak "voice" "究极T死刑"
+
+##############################################################
+0 "--重置--" sync /Removing combatant 至尊亚历山大/ window 870 jump 0
+
+################# Phase 1
+0	"顺劈" sync /发动了“圣炎”/ window 8
+7	"T死刑"	#Punishing Heat
+11	"顺劈"
+17	"白光之鞭" 
+24	"惩戒射线"	#debuff
+29	"百万神圣"
+33	"百万神圣"
+39	"重力异常"	duration 6
+47	"十字圣礼"
+47	"顺劈"
+57	"T死刑"	#Punishing Heat
+60	"--BOSS不可选中--"	#Time Push
+
+################# Phase 2
+62	"阿里达乌斯之速出现"
+97	""
+98	"阿里达乌斯之翼出现"	#spawns 35s after 阿里达乌斯之速出现
+107	"小神圣"	sync /发动了“小神圣”/ window 107,0
+115	"小神圣"
+124	"小神圣"
+136	""
+137	"阿里达乌斯之&时出现"	#spawn 39s after 阿里达乌斯之翼出现
+148	"粉碎"	sync /发动了“粉碎”/ window 148,0
+151	"小重力"	#阿里达乌斯之时
+155	"粉碎"	#阿里达乌斯之力
+160	"小重力"	#阿里达乌斯之时
+163	"粉碎"	#阿里达乌斯之力
+169	"小重力"	#阿里达乌斯之时
+172	"粉碎"	#阿里达乌斯之力
+178	"小重力"	#阿里达乌斯之时
+180	"粉碎"	#阿里达乌斯之力
+187	"小重力"	#阿里达乌斯之时
+188	"粉碎"	#阿里达乌斯之力
+195	"粉碎"	#阿里达乌斯之力
+196	"小重力"	#阿里达乌斯之时
+203	"粉碎"	#阿里达乌斯之力
+205	"小重力"	#阿里达乌斯之时
+211	"粉碎"	#阿里达乌斯之力
+219	"粉碎"	#阿里达乌斯之力
+235	"狂暴"
+633	""
+633	""
+633	""
+633	""
+633	""
+633	""
+633	""
+633	""
+633	""
+633	""
+
+################# Phase 3
+634	"神圣审判"
+645	"--BOSS可被选中--"	#exactly 2 minutes after General's Time spawns
+645	"光阴之翼"	sync /正在发动“光阴之翼”/ window 645,0
+658	"连线"
+667	"时间停止"	#Temporal Displacement debuff, freeze time
+675	"重力异常"	duration 6
+684	"十字圣礼"
+688	"百万神圣"
+696	"顺劈"
+702	"T死刑"	#Punishing Heat
+706	"顺劈"
+711	"连线"
+720	"时间停止"	#Temporal Displacement debuff, freeze time
+729	"重力异常"	duration 6
+737	"拜火圣礼"	#move in
+742	"百万神圣"
+749	"顺劈"
+755	"T死刑"	#Punishing Heat
+760	"顺劈"
+762	"--BOSS不可选中--"	#Time Push
+
+################# Phase 4
+765	"--BOSS可被选中--"
+769	"时空门"	#Healer SE
+790	"审判结晶"
+798	"惩戒射线"	#debuff
+802	"水晶爆炸"	#face away
+811	"审判结晶"
+819	"拜火圣礼"	#move in
+823	"水晶爆炸"	#face away
+832	"审判结晶"
+838	"T死刑"	#Punishing Heat
+844	"水晶爆炸"	#face away
+852	"审判结晶"
+856	"水晶爆炸"	#face away
+
+################# Phase 5
+869	"时空潜行" sync/至尊亚历山大发动了“时空潜行”/ window 869,0
+871	"--重置--" sync /Removing combatant 至尊亚历山大/ window 0,1000 jump 0
+869	"--BOSS不可选中--"
+876	"结晶破碎"	#move away
+877	"--BOSS可被选中--"
+877	"十字"
+884	"拜火圣礼"	#move in
+896	"T死刑"	#Punishing Heat
+901	"顺劈"
+907	"重力异常"	duration 6
+915	"惩戒射线"	#debuff
+
+926	"时空潜行"
+926	"连线"
+926	"--BOSS不可选中--"
+933	"结晶破碎"
+933	"--BOSS可被选中--"
+934	"十字"
+941	"拜火圣礼"
+952	"T死刑"	#Punishing Heat
+958	"顺劈"
+964	"重力异常"	duration 6
+971	"惩戒射线"	#debuff
+
+################# Phase 6
+981	"召唤亚历山大" sync/正在咏唱“召唤亚历山大”/ window 981,0
+990	"忏悔区" sync /正在咏唱“忏悔区”/ window 990,0
+1013	"惩戒射线"	#debuff
+1022	"神圣爆发"	 sync /正在咏唱“神圣爆发”/ window 1022,0	#AoE, no cast bar
+1029	"圣光之鞭"	#Heal Prey Tank
+1037	"神罚射线"
+1043	"忏悔区"
+1046	"射线"	#hit x6 over 17s
+1056	"十字圣礼"
+1057	"十字"	#十字圣礼?
+1066	"惩戒射线"	#debuff
+1075	"神圣爆发"	#AoE, no cast bar
+1082	"百万神圣"
+1091	"圣光之鞭"	#Heal Prey Tank
+1099	"神罚射线"
+1105	"忏悔区"
+1107	"射线"	#hit x6 over 17s
+1117	"十字圣礼"
+1118	"十字"
+1128	"惩戒射线"	#debuff
+1137	"神圣爆发"	#AoE, no cast bar
+1144	"百万神圣"
+1153	"圣光之鞭"
+1161	"神罚射线"
+1165	"忏悔区"
+1169	"射线"

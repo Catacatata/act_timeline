@@ -1,0 +1,190 @@
+﻿# Alexander - cuff of the Son (Savage) - A6S / M2S
+# Created by Shasta Kota of Death & Taxes (DnT) on Gilgamesh
+# Shasta's reddit: /u/shastaxc
+# 汉化翻译 by 卡塔利亚 Cataria on 拉诺西亚
+
+
+###定制你自己的时间轴，不去除每句前的#标签
+###他们就不会出现在你的时间轴上！
+
+###DPS能隐藏这些
+#隐藏所有 "魔法受伤加重"
+#隐藏所有 "AOE"
+#隐藏所有 "残暴铁拳"
+
+##############################################################
+################## Windows 8 & 10 音效 ##################
+#删去前方的#标签来选择声音
+#define speaker "voice" "Microsoft Huihui Desktop" 0 100
+#define speaker "voice" "Microsoft Hanhan Desktop" 0 100
+
+#################### Windows 7 音效 ####################
+#删去前方的#标签来选择声音
+#define speaker "voice" "Microsoft Lili" 0 100
+
+################ 定制语音播报 #####################
+########删去前方的#标签来选择语音播报内容
+#alertall "配件更换" before 1 speak "voice" "配件更换"
+#alertall "集合" before 2 speak "voice" "集合"
+#alertall "集合+高度算术" before 2 speak "voice" "集合"
+#alertall "高度算术" before 0 speak "voice" "高度算术"
+#alertall "集合+高度算术" before 0 speak "voice" "高度算术"
+#alertall "中间集合" before 0 speak "voice" "中间集合"
+#alertall "分散" before 0 speak "voice" "分散"
+#alertall "分开集合" before 0 speak "voice" "分开集合"
+#alertall "吹飞&集合" before 4 speak "voice" "吹飞"
+#alertall "冰柱后方" before 4 speak "voice" "冰柱后方"
+
+#alertall "精神冲击" before 1 speak "voice" "沉默"
+#alertall "幻影连线" before 2 speak "voice" "连线"
+#alertall "AOE" before 5 speak "voice" "减伤"
+#alertall "冰圈标记" before 1 speak "voice" "冰圈标记"
+
+##############################################################
+########Boss 1
+0 "--战斗终了--" sync /第67机工兵仓库的封锁解除了/ window 10000 jump 0 #检测复位boss 1
+0 "--战斗终了--" sync /第68机工兵仓库的封锁解除了/ window 10000 jump 0 #检测复位boss 2
+0 "--战斗终了--" sync /第69机工兵仓库的封锁解除了/ window 10000 jump 0 #检测复位boss 3
+0 "--战斗终了--" sync /第70机工兵仓库的封锁解除了/ window 10000 jump 0 #检测复位boss 4
+0 "--战斗开始--" sync /第67机工兵仓库被封锁还有15秒/ window 10000 #检测开始Boss 1
+7 "魔法受伤加重"
+11 "精神冲击" #需要沉默
+16 "地雷"
+27 "幻影突击"
+36 "魔法受伤加重"
+40 "魔法受伤加重"
+########Boss血下50%则进入该阶段
+40 "Boss+4分身" duration 27 sync /Added new combatant 爆破者幻象/ window 5
+########Pushes when adds dead
+83 "地雷" sync /爆破者发动了“弹道导弹”/ window 40,0
+95 "幻影连线" #手朝上则背对它，手朝下则正对它
+109 "精神冲击" #需要沉默
+113 "地雷"
+
+########Boss 2
+300 "--战斗开始--" sync /第68机工兵仓库被封锁还有15秒/ window 10000 #检测开始Boss 2
+309 "魔法受伤加重" #魔力射击
+311 "配件更换" 
+323 "魔法受伤加重" #魔力射击
+325 "配件更换" 
+337 "魔法受伤加重"
+339 "配件更换"
+351 "魔法受伤加重"
+353 "配件更换"
+365 "魔法受伤加重"
+367 "配件更换"
+379 "魔法受伤加重"
+381 "配件更换"
+393 "魔法受伤加重"
+395 "配件更换"
+407 "魔法受伤加重"
+409 "配件更换"
+421 "魔法受伤加重"
+423 "配件更换"
+435 "魔法受伤加重"
+437 "配件更换"
+########Boss死亡则进入该阶段
+450 "小怪刷新" sync /Added new combatant 强离子体α/ window 150,0 #2 α, 2 γ
+456 "配件更换"
+464 "小怪刷新" sync /Added new combatant 强离子体β/ window 164,0 #2 α, 2 β, 1 γ
+478 "小怪刷新" sync /Added new combatant 强离子体γ/ window 10,2 #2 α, 1 γ
+481 "配件更换"
+496 "小怪刷新" sync /Added new combatant 强离子体γ/ window 10,2 #3 α, 1 γ
+498 "配件更换"
+507 "配件更换"
+
+########Boss 3
+530 "--战斗开始--"	sync /第69机工兵仓库被封锁还有15秒/ window 10000	#检测开始Boss 3
+545 "集合+高度算术"
+559 "AOE"
+560 "小怪刷新"	sync /Added combatant 弥达斯硬盔兵/ window 30,0	#12 adds
+567 "受伤加重"
+570 "磁悬浮"
+576 "高度算术"		#可能在这里需要重新同步
+585 "集合"
+598 "AOE"
+601 "炮手出现"	sync / Added combatant 弥达斯炮手/ window 71,0	#4 gunners
+606 "磁悬浮"
+609 "高度算术"
+617 "磁悬浮"
+619 "集合+高度算术"
+630 "AOE"
+639 "AOE"
+
+########Boss 4
+750	"--战斗开始--"	sync /第70机工兵仓库被封锁还有15秒/ window 10000	#检测开始Boss 4
+757	"残暴铁拳"		#物理受伤
+766	“元素干扰”	sync /发动了“元素干扰”/ window 16,40
+767	"中间集合"	duration 5	#落下AOE
+773	"分散"		#消防队
+782	"残暴铁拳"		#物理受伤
+783	"分开集合"	duration 4
+788	"AOEs"
+790	"冰圈标记"
+803	"残暴铁拳"		#物理受伤
+804	"分开集合"	duration 5
+810	"AOEs"
+811	"中间集合"	duration 6	#落下AOE
+818	"分散"
+827	"吹飞&集合"		#超级气旋
+828	"分开集合"	duration 3
+832	"AOEs"
+834	"残暴铁拳"		#物理受伤
+845	"冰柱后方"		#Ultra Flash
+
+850	"残暴铁拳"		#物理受伤
+859	“元素干扰”	sync /发动了“元素干扰”/ window 90
+860	"中间集合"	duration 6
+867	"分散"
+875	"残暴铁拳"		#物理受伤
+876	"分开集合"	duration 5
+882	"AOEs"
+883	"冰圈标记"
+897	"残暴铁拳"		#物理受伤
+897	"分开集合"	duration 5
+903	"AOEs"
+904	"中间集合"	duration 6
+911	"分散"
+920	"吹飞&集合"		#超级气旋
+921	"分开集合"	duration 3
+925	"AOEs"
+927	"残暴铁拳"		#物理受伤
+938	"冰柱后方"
+
+943	"残暴铁拳"		#物理受伤
+952	“元素干扰”	sync /发动了“元素干扰”/ window 90
+953	"中间集合"	duration 6
+959	"分散"
+968	"残暴铁拳"		#物理受伤
+969	"分开集合"	duration 5
+974	"AOEs"
+976	"冰圈标记"
+989	"残暴铁拳"		#物理受伤
+990	"分开集合"	duration 5
+996	"AOEs"
+997	"中间集合"	duration 6
+1004 "分散"
+1013 "吹飞&集合"		#超级气旋
+1014 "分开集合"	duration 3
+1018 "AOEs"
+1020 "残暴铁拳"		#物理受伤
+1031 "冰柱后方"
+
+1036 "残暴铁拳"		#物理受伤
+1045 “元素干扰”	sync /发动了“元素干扰”/ window 90
+1046 "中间集合"	duration 6
+1052 "分散"
+1061 "残暴铁拳"		#物理受伤
+1062 "分开集合"	duration 5
+1067 "AOEs"
+1069 "冰圈标记"
+1082 "残暴铁拳"		#物理受伤
+1083 "分开集合"	duration 5
+1089 "AOEs"
+1090 "中间集合"	duration 6
+1097 "分散"
+1106 "吹飞&集合"		#超级气旋
+1107 "分开集合"	duration 3
+1111 "AOEs"
+1113 "残暴铁拳"		#物理受伤
+1124 "冰柱后方"

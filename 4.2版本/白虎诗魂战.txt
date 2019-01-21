@@ -1,0 +1,113 @@
+# Byakko Extreme
+
+hideall "--同步--"
+
+0 "--重置--" sync /Removing combatant 白虎\.  Max HP: 10997725\./ window 10000 jump 0
+
+##### Phase 1
+0.0 "--同步--" sync /:战斗开始！/ window 0,1
+0.7 "--同步--" sync / 00:0044:我体内的冲动已无法抑制！/ window 1,30
+10.0 "风雷波动" # end of castbar
+16.0 "天雷掌" # end of castbar
+26.0 "咒缚雷" # end of castbar
+28.5 "乾坤一掷 1" duration 4.5 # end of castbar
+38.5 "乾坤一掷 2" duration 4.5 # end of castbar
+
+55.0 "--同步--" sync /14:27ED:白虎正在咏唱“无间地狱”/ window 5,5
+58.0 "无间地狱" sync /白虎:27ED:无间地狱:/ window 5,5 # end of castbar
+63.5 "风雷波动" # end of castbar
+67.0 "妖风" # debuff
+74.5 "雷火一闪" # end of castbar
+83.5 "--跳至12点--"
+88.0 "水坑标记 x2" # markers appearing
+
+91.0 "白帝出现" # targetable
+100.5 "风雷波动" # end of castbar
+102.0 "白帝顺劈" # damage
+108.0 "白帝顺劈" # damage
+110.5 "天雷掌" # end of castbar
+114.0 "--老虎不能被选中--"
+120.0 "--老虎落地--" # damage
+116.5 "--同步--" sync /14:27DD:白虎正在咏唱“远雷”/ window 5,5
+121.5 "远雷" sync /:白虎:27DD:远雷:/ window 5,5 # end of castbar
+124.5 "雷火一闪" # end of castbar
+129.0 "风雷波动" # end of castbar
+131.5 "--不可选中--"
+136.5 "躲球" # appearing
+155.0 "雷轰" # end of castbar
+
+##### Phase 2: zzz x infinity
+159.5 "--同步--" sync /00:0044:世间万物皆因天惊地动而颤抖！/ window 200,20
+198.0 "月环 AOE" # aoe disappears
+205.0 "线性 AOE" # aoe disappears
+216.0 "线性 AOE" # aoe disappears
+229.0 "月环 AOE" # aoe disappears
+233.0 "线性 AOE" # aoe disappears
+
+##### Phase 3: More Bubbles
+260.5 "--同步--" sync /白虎:27FB:迅雷风烈波:/ window 300,20 # damage
+279.0 "天雷掌" # end of castbar
+285.5 "百雷缭乱" # appearing
+291.0 "咒缚雷" # end of castbar
+298.0 "乾坤一掷 1" # end of castbar
+308.0 "乾坤一掷 2" # end of castbar
+314.5 "旋体脚" # end of castbar
+
+326.0 "--同步--" sync /14:27ED:白虎正在咏唱“无间地狱”/ window 5,5
+329.0 "无间地狱" sync /:白虎:27ED:无间地狱:/ window 5,5 # end of castbar
+334.5 "风雷波动" # end of castbar
+339.0 "球标记 x3" duration 8 # appearing -> disappearing
+354.0 "雷火一闪" # end of castbar
+357.5 "--跳至12点--"
+363.0 "雷火一闪" # end of castbar
+
+373.0 "白帝出现" # targetable
+373.5 "水坑标记 x2" # markers appearing
+382.0 "--老虎不能被选中--"
+384.0 "--同步--" sync /14:27DD:白虎正在咏唱“远雷”/ window 5,5
+389.0 "远雷" sync /:白虎:27DD:远雷:/ window 5,5 # end of castbar
+387.0 "--老虎落地--" # damage
+392.0 "雷火一闪" # end of castbar
+392.0 "--同步--" sync /14:27DD:白虎正在咏唱“远雷”/ window 5,5
+397.0 "远雷" sync /:白虎:27DD:远雷:/ window 5,5 # end of castbar
+400.0 "雷火一闪" # end of castbar
+407.5 "天雷掌" # end of castbar
+408.5 "白帝顺劈"
+419.5 "躲球" # appearing
+438.0 "雷轰" # end of castbar
+
+445.5 "--同步--" sync /14:27D9:白虎正在咏唱“雷火一闪”/ window 5,5
+449.5 "雷火一闪" # end of castbar
+464.5 "风雷波动" # end of castbar
+475.5 "球标记 x3" duration 7 # appearing -> disappearing
+476.0 "百雷缭乱" # appearing
+485.0 "咒缚雷" # end of castbar
+492.0 "乾坤一掷 1" # end of castbar
+502.0 "乾坤一掷 2" # end of castbar
+508.5 "旋体脚" # end of castbar
+522.5 "天雷掌" # end of castbar
+532.5 "风雷波动" # end of castbar
+540.5 "--同步--" sync /14:27DD:白虎正在咏唱“远雷”/ window 5,5
+545.5 "远雷" sync /:白虎:27DD:远雷:/ window 5,5 # end of castbar
+551.5 "天雷掌" # end of castbar
+
+561.0 "--同步--" sync /14:27ED:白虎正在咏唱“无间地狱”/ window 5,5
+564.0 "无间地狱" sync /白虎:27ED:无间地狱:/ window 5,5 # end of castbar
+570.0 "风雷波动" # end of castbar
+574.5 "球标记 x3" duration 8 # appearing -> disappearing
+583.0 "妖风" # debuff
+586.0 "--同步--" sync /14:27D9:白虎正在咏唱“雷火一闪”/ window 5,5
+589.5 "雷火一闪" # end of castbar
+593.0 "--跳至12点--"
+594.5 "--同步--" sync /14:27D9:白虎正在咏唱“雷火一闪”/ window 5,5
+598.0 "雷火一闪" # end of castbar
+613.5 "风雷波动" # end of castbar
+622.0 "百雷缭乱" # appearing
+627.0 "咒缚雷" # end of castbar
+635.5 "乾坤一掷 1" # end of castbar
+645.5 "乾坤一掷 2" # end of castbar
+652.0 "旋体脚" # end of castbar
+
+661.5 "--中间跳跃--"
+666.0 "风雷波动 x4" duration 7 # end of castbar => 4th damage
+683.0 "狂暴 风雷波动" # wipe

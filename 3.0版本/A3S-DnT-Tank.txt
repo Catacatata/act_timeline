@@ -1,0 +1,152 @@
+# Alexander - The Arm of the Father (Savage) - A3S
+# Created by Shasta Kota of Death & Taxes (DnT) on Gilgamesh
+# Shasta's reddit: /u/shastaxc
+
+0 "--战斗终了--" sync /第9大型冷凝器的封锁解除了/ window 10000 jump 0
+
+# Phase 1 - 有生命活水 (人形) - 第一次万变水波
+0 "--第一阶段--" sync /第9大型冷凝器被封锁还有15秒/ window 10000
+7 "流体摆动"
+12 "万变水波 1" duration 3
+17 "万变水波 2"
+22 "流体摆动"
+25 "溅开 x3"
+32 "流体摆动"
+45 "冲洗"
+50 "溅开 x3"
+55 "流体摆动"
+ 
+# Phase 2 - 有生命活水 & 活水之手 (手形)
+65 "第二阶段" sync /有生命活水失去无敌效果/ window 10
+70 "流体强袭"
+77 "冲净"
+78 "指尖" duration 7
+90 "流体强袭"
+100 "流体强袭"
+108 "冲净"
+117 "流体摆动"
+118 "猜拳：布 手拉一起" duration 5
+130 "指尖" duration 7
+137 "水量均等化"
+137 "DPS爆发 目标4%" duration 25
+140 "流体强袭"
+149 "流体强袭"
+157 "流体强袭"
+163 "痛苦之手"
+170 "猜拳：石头 手拉开" duration 5
+180 "流体摆动"
+ 
+# Phase 3 - 活塞润滑剂 & 齿轮润滑剂 (软泥)
+182 "Phase 3" sync /有生命活水获得无敌效果/ window 10
+203 "坦克连线" duration 7
+225 "磁石" duration 5
+233 "坦克连线" duration 7
+248 "磁石" duration 5
+ 
+# Phase 4 Loop 1 - 有生命活水
+287 "Phase 4 Loop 1" sync /有生命活水失去无敌效果/ window 10
+298 "倾泻"
+301 "磁石" duration 5
+313 "溅开 x3"
+318 "流体摆动"
+329 "冲洗"
+329 "万变水波 1" duration 3
+334 "万变水波 2"
+338 "流体摆动"
+347 "溅开 x3"
+350 "流体摆动"
+358 "指尖" duration 7
+359 "冲洗"
+368 "流体摆动"
+
+# Phase 5 Loop 1 - 液体监狱 & 有生命活水
+370 "Phase 5 Loop 1" sync /有生命活水开始释放倾泻/ window 10
+374 "倾泻"
+389 "液体监狱"
+389 "溅开 x3"
+394 "流体摆动"
+404 "流体摆动"
+406 "溅开 x3"
+415 "指尖" duration 7
+426 "流体摆动"
+430 "溅开 x6" duration 6
+439 "流体摆动"
+
+# Phase 6 Loop 1 - Liquid Rage/Embolus
+440 "Phase 6 Loop 1" sync /有生命活水开始释放倾泻/ window 10
+445 "倾泻"
+454 "流体摆动"
+#456 "万变水波" duration 3
+456 "坦克连线" duration 7
+#457 "窒息 1"
+#460 "窒息 2"
+461 "磁石" duration 5
+#462 "万变水波" duration 3
+475 "流体摆动"
+#481 "窒息 1"
+#484 "窒息 2"
+485 "撞人小水球"
+493 "流体摆动"
+#496 "万变水波" duration 3
+496 "坦克连线" duration 7
+505 "冲洗"
+505 "撞人小水球"
+#505 "万变水波" duration 3
+513 "流体摆动"
+
+# Phase 4 Loop 2 - 有生命活水
+516 "Phase 4 Loop 2" sync /有生命活水开始释放倾泻/ window 10
+521 "倾泻"
+524 "磁石" duration 5
+535 "溅开 x3"
+541 "流体摆动"
+550 "冲洗"
+550 "万变水波 1" duration 3
+555 "万变水波 2"
+560 "流体摆动"
+566 "溅开 x3"
+572 "流体摆动"
+580 "指尖" duration 7
+582 "冲洗"
+590 "流体摆动"
+
+# Phase 5 Loop 2 - 液体监狱 & 有生命活水
+592 "Phase 5 Loop 2" sync /有生命活水开始释放倾泻/ window 10
+597 "倾泻"
+611 "液体监狱"
+611 "溅开 x3"
+617 "流体摆动"
+625 "流体摆动"
+629 "溅开 x3"
+637 "指尖" duration 7
+649 "流体摆动"
+652 "溅开 x6" duration 6
+662 "流体摆动"
+
+# Phase 6 Loop 2 - Liquid Rage/Embolus
+663 "Phase 6 Loop 2" sync /有生命活水开始释放倾泻/ window 10
+668 "倾泻"
+679 "流体摆动"
+#680 "万变水波" duration 3
+680 "坦克连线" duration 7
+#681 "窒息 1"
+#684 "窒息 2"
+685 "磁石" duration 5
+#686 "万变水波" duration 3
+700 "流体摆动"
+#705 "窒息 1"
+#708 "窒息 2"
+709 "撞人小水球"
+717 "流体摆动"
+#720 "万变水波" duration 3
+720 "坦克连线" duration 7
+729 "冲洗"
+729 "撞人小水球"
+#729 "万变水波" duration 3
+737 "流体摆动"
+
+# Phase 4 Loop 3 - 有生命活水
+740 "Phase 4 Loop 3" sync /有生命活水开始释放倾泻/ window 10
+745 "倾泻"
+748 "磁石" duration 5
+768 "狂暴"

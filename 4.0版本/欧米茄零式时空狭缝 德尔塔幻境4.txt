@@ -1,0 +1,211 @@
+﻿# 欧米茄零式时空狭缝 德尔塔幻境4 - O4S
+# Created by Shasta Kota of Death & Taxes (DnT) on Gilgamesh
+# Shasta's reddit: /u/shastaxc
+# Last Updated: 07/31/2017
+# 汉化翻译 by 卡塔利亚
+
+#############################################################
+###定制你自己的时间轴，在不想要的提示前加上#标签
+###他们就不会出现在你的时间轴上！
+
+#hideall "--重置--"
+
+##############################################################
+################## Windows 8 & 10 音效 ##################
+#删去前方的#标签来选择声音
+#define speaker "voice" "Microsoft Huihui Desktop" 0 100
+#define speaker "voice" "Microsoft Hanhan Desktop" 0 100
+
+#################### Windows 7 音效 ####################
+#删去前方的#标签来选择声音
+#define speaker "voice" "Microsoft Lili" 0 100
+
+#################### NGA汉化版限定 ####################
+#删去前方的#标签来选择声音
+#define speaker "voice" 0 100
+
+################ 定制语音播报 #####################
+########删去或添加前方的#标签来选择语音播报内容
+0	"--重置--" sync /Removing combatant 艾克斯迪司/ window 1000 jump 0
+0	"--重置--" sync /Removing combatant 新生艾克斯迪司/ window 1000 jump 0
+
+
+######Phase 1
+13	"连续咏唱"	sync /艾克斯迪司发动了“连续咏唱”/ window 13,0
+16	"冰封"
+19	"冰封"
+24	"连续咏唱"
+31	"T死刑"	#Thunder III x2
+37	"连续咏唱"
+43	"爆炎 (DPS)"	#爆炎 on DPS
+47	"爆炎 (T/H)"	#爆炎 on Tanks & Healers
+54	"白洞"	#Need full HP
+66	"--Boss 无法选中--"
+73	"击退"	#Collision
+75	"神圣"	#Stack Mechanic
+78	"火炬图标"	#1 tank, 1 healer, 1 DPS
+79	"死亡吐息"
+83	"核爆"
+
+######Phase 2
+86	"--Boss 可被选中--"
+90	"随机元素"	#Enhanced Thunder/Fire/冰封
+97	"击退"	#Vacuum Wave
+107	"白洞"	#Need full HP
+119	"黑洞"	#黑洞s tether to Tanks & Healers + AoE dmg + HP Down Debuff
+128	"爆炎 (DPS)"	#爆炎 on DPS
+132	"爆炎 (T/H)"	#爆炎 on Tanks & Healers
+135	"神圣"	#Stack Mechanic
+135	"--黑洞消失--"
+140	"血下限消失"
+144	"白洞"	#Need full HP
+159	"T死刑"	#Thunder III x2
+167	"陨石流星"
+180	"--Boss 无法选中--"
+186	"击退"	#Collision
+188	"神圣"	#Stack Mechanic
+191	"火炬图标"	#1 tank, 1 healer, 1 DPS
+192	"死亡吐息"
+196	"核爆"
+
+######Phase 3
+200	"--Boss 可被选中--"
+203	"随机元素"	#Enhanced Thunder/Fire/冰封
+210	"击退"	#Vacuum Wave
+220	"白洞"	#Need full HP
+232	"黑洞"	#黑洞s tether to Tanks & Healers + AoE dmg + HP Down Debuff
+241	"冰封"	#Healers + DPS
+243	"冰封"	#Healers + DPS
+243	"火炬图标"	#1 tank, 1 healer, 1 DPS
+248	"核爆"
+253	"血下限消失"
+258	"白洞"	#Need full HP
+265	"连续咏唱"
+273	"T死刑"	#Thunder III x2
+280	"陨石流星"	#Party wipe if boss HP>65%
+282	"--Boss 无法选中--"
+344	"--LB条重置--"
+
+######################################################
+######Neo Phase 1
+507	"至高无上"	sync/新生艾克斯迪司发动了“至高无上”/ window 507,0	#AoE + 15s DoT
+516	"T死刑"	#Aero III
+527	"冰火雷 1"	#冰封 (Healers & DPS) + 爆炎 (DPS)
+530	"冰火雷 2"	#冰封 (Healers & DPS) + 爆炎 (Tanks & Healers)
+543	"大十字·阿尔法"	#AoE + Debuffs (Hysteria, White/Black Wound, 16s Allagan Field, 15s Acceleration Bomb)
+546	"--Boss 无法选中--"
+549	"--Boss 可被选中--"
+555	"鸳鸯锅 (全屏AOE)"	#1 of 4 鸳鸯锅 variants
+558	"--加速度炸弹解决--"
+559	"--亚拉戈领域爆炸--"
+563	"鸳鸯锅 (黑白交换)"	#1 of 4 鸳鸯锅 variants
+569	"坦克连线"	#双重攻击连线
+575	"双重攻击"	#Boss jumps to target, 击退 target, jumps back
+
+######Neo Phase 2
+588	"无之失控"	#Linearly propagating circle AoEs
+593	"鸳鸯锅 (AOE内外)"	#1 of 4 鸳鸯锅 variants
+604	"T死刑"	#Aero III
+619	"大十字·德尔塔"	#AOE + Debuffs (8s 叉形闪电 x2, 7s Cursed Shriek x2, 8s Compressed Water x1, something else)
+626	"死亡尖叫"	#Look away from Cursed Shriek players
+627	"水+雷 组合击"	#Lightning alone, stack on water
+631	"鸳鸯锅"	#1 of 4 random variants
+640	"至高无上"	#AoE + 15s DoT
+652	"T死刑"	#Aero III
+662	"大地摇动"	#On Tanks
+667	"击退顺劈"	#Vacuum Wave
+684	"无之失控"	#Linearly propagating circle AoEs
+688	"光与暗"	#核爆 Markers Out (DPS, Healer, Tank) & Stack Inidicator (Healer)
+695	"核爆 + 神圣"
+701	"鸳鸯锅 (AOE内外)"	#1 of 4 鸳鸯锅 variants
+716	"--立体魔法阵 x4--"
+729	"鸳鸯锅 (黑白)"	#1 of 4 鸳鸯锅 variants
+736	"--小怪必须死--"
+742	"大漩涡"	#Everyone to low HP
+745	"坦克连线"	#双重攻击 Tether
+750	"双重攻击"	#Boss jumps to target, 击退 target, jumps back
+765	"至高无上"	#AoE + 15s DoT
+771	"击退顺劈"	#Vacuum Wave
+778	"T死刑"	#Aero III
+785	"无之失控"	#Linearly propagating circle AoEs
+793	"大十字·阿尔法"	#AoE + Debuffs (Hysteria, White/Black Wound, 16s Allagan Field, 15s Acceleration Bomb)
+795	"--Boss 无法选中--"
+798	"--Boss 可被选中--"
+804	"鸳鸯锅 (全屏AOE)"	#1 of 4 鸳鸯锅 variants
+808	"--加速度炸弹解决--"
+809	"--亚拉戈领域爆炸--"
+812	"鸳鸯锅 (黑白交换)"	#1 of 4 鸳鸯锅 variants
+829	"冰火雷 1"	#冰封 (Healers & DPS) + 爆炎 (DPS)
+832	"冰火雷 2"	#冰封 (Healers & DPS) + 爆炎 (Tanks & Healers)
+837	"鸳鸯锅 (AOE内外)"	#1 of 4 鸳鸯锅 variants
+
+######Neo Phase 3
+847	"大十字·欧米茄"	#AoE + Debuffs (White/Black Wound, Hysteria, 叉形闪电, Cursed Shriek, Allagan Field, Acceleration Bomb, something else)
+854	"最终之战"
+859	"叉形闪电"
+861	"鸳鸯锅"	#1 of 4 鸳鸯锅 variants
+866	"鸳鸯锅"	#1 of 4 鸳鸯锅 variants
+873	"鸳鸯锅"	#1 of 4 鸳鸯锅 variants
+876	"--加速度炸弹解决--"
+877	"死亡尖叫"	#Look away from Cursed Shriek player
+885	"鸳鸯锅 (Raid AoE)"	#1 of 4 鸳鸯锅 variants
+891	"--亚拉戈领域爆炸--"
+896	"至高无上"	#AoE + 15s DoT
+
+######Neo Phase 4 (Loop of Neo P2)
+906	"无之失控"	#Linearly propagating circle AoEs
+911	"鸳鸯锅"	#1 of 4 鸳鸯锅 variants
+922	"T死刑"	#Aero III
+937	"大十字·德尔塔"	#AOE + Debuffs (8s 叉形闪电 x2, 7s Cursed Shriek x2, 8s Compressed Water x1, something else)
+944	"死亡尖叫"	#Look away from Cursed Shriek players
+946	"水+雷 组合击"	#Lightning alone, stack on water
+949	"鸳鸯锅"	#1 of 4 鸳鸯锅 variants
+958	"至高无上"	#AoE + 15s DoT
+970	"T死刑"	#Aero III
+980	"大地摇动"	#On Tanks
+985	"击退顺劈"	#Vacuum Wave
+1002	"无之失控"	#Linearly propagating circle AoEs
+1007	"光与暗"	#核爆 Markers Out (DPS, Healer, Tank) & Stack Inidicator (Healer)
+1013	"核爆 + 神圣"
+1019	"鸳鸯锅"	#1 of 4 鸳鸯锅 variants
+1034	"--立体魔法阵 x4--"
+1047	"鸳鸯锅"	#1 of 4 鸳鸯锅 variants
+1054	"--小怪必须死--"
+1060	"大漩涡"	#Everyone to low HP
+1063	"坦克连线"	#双重攻击 Tether
+1068	"双重攻击"	#Boss jumps to target, 击退 target, jumps back
+1083	"至高无上"	#AoE + 15s DoT
+1089	"击退顺劈"	#Vacuum Wave
+1096	"T死刑"	#Aero III
+1103	"无之失控"	#Linearly propagating circle AoEs
+1111	"大十字·阿尔法"	#AoE + Debuffs (Hysteria, White/Black Wound, 16s Allagan Field, 15s Acceleration Bomb)
+1113	"--Boss 无法选中--"
+1116	"--Boss 可被选中--"
+1121	"鸳鸯锅"	#1 of 4 鸳鸯锅 variants
+1125	"--加速度炸弹解决--"
+1126	"--亚拉戈领域爆炸--"
+1129	"鸳鸯锅"	#1 of 4 鸳鸯锅 variants
+1146	"冰火雷 1"	#冰封 (Healers & DPS) + 爆炎 (DPS)
+1150	"冰火雷 2"	#冰封 (Healers & DPS) + 爆炎 (Tanks & Healers)
+1155	"鸳鸯锅"	#1 of 4 鸳鸯锅 variants
+
+######Neo Phase 5
+1164	"规律崩坏"	#Starts soft enrage
+1173	"大漩涡"	#Everyone to low HP
+1176	"狂乱之拳 x9"	#Small Raid AoEs
+1183	"狂乱领域"	#Big Raid AoE
+1186	"狂乱之拳 x9"	#Small Raid AoEs
+1193	"狂乱领域"	#Big Raid AoE
+1196	"狂乱之拳 x9"	#Small Raid AoEs
+1203	"狂乱领域"	#Big Raid AoE
+1206	"狂乱之拳 x9"	#Small Raid AoEs
+1213	"狂乱领域"	#Big Raid AoE
+1216	"狂乱之拳 x9"	#Small Raid AoEs
+1223	"狂乱领域"	#Big Raid AoE
+1226	"狂乱之拳 x9"	#Small Raid AoEs
+1233	"狂乱领域"	#Big Raid AoE
+1236	"狂乱之拳 x9"	#Small Raid AoEs
+1243	"狂乱领域"	#Big Raid AoE
+1246	"狂乱之拳 x9"	#Small Raid AoEs
+1253	"狂乱领域"	#Big Raid AoE
+1266	"狂暴"	#Long 至高无上
